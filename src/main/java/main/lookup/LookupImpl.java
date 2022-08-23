@@ -37,6 +37,6 @@ public class LookupImpl implements Lookup {
 
     @Override
     public String lookupEnglishWord(String indonesianWord){
-        return englishToIndonesian.getOrDefault(indonesianWord, "Kata ini gak ada");
+        return indonesianToEnglish.getOrDefault(indonesianWord, "Kata ini gak ada");
     }
 }
