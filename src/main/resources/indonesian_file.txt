@@ -17,29 +17,29 @@ often,sering
 seldom,jurang
 sometimes,karang karang
 avoid,hindari
-die, meninggal/memati
+die,meninggal:memati
 stay safe,tetap aman
-heavily,derus/gede
+heavily,derus:gede
 thunder,petir
 lightning,kilat
 heatwave,gelombang udara panas
-talk,bicara/ngomong
+talk,bicara:ngomong
 drunk,marbok
 bracelet,kelang
 youngest,bungsa
-father,ayah/bapak/bokap
+father,ayah:bapak:bokap
 oldest,salung
 sibling,bersudara
 the parents of your childs spouse,besan
-turn on,nyalain/menyalakan
+turn on,nyalain:menyalakan
 divorce,cerai
 straight away,langsung
 practice,latihan
-free time,waktu luang/senggang
+free time,waktu luang:senggang
 university student,manhasiswa
 study in university,kuliah
-easy,mudah/gampang
-hard,sulit/susah
+easy,mudah:gampang
+hard,sulit:susah
 swimming,bernang
 diving,menyelam
 poisonous,beracun
@@ -49,8 +49,8 @@ mention,menyebutkan
 vocabulary,kosakata
 related,berkaitan
 activities,kegiatan
-short,pendek/singkat
-meeting,bertemu/rapat
+short,pendek:singkat
+meeting,bertemu:rapat
 prepare,menyiapkan
 shop,toko
 shopping,berbelanja
@@ -80,7 +80,7 @@ believe,percaya
 warehouse,gudung
 lucky,beruntung
 btw,ngomong
-quite/reasonable,lumayan
+quite:reasonable,lumayan
 pay it off,mengangsurnya
 until,selama
 brand,merek
@@ -96,6 +96,6 @@ roundabout,bundaran
 wedding,pernikahan
 across,seberang
 through,lewat
-tired,capek/ngantuk
+tired,capek:ngantuk
 powder,bubuk
 
