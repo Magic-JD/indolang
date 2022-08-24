@@ -17,7 +17,7 @@ often,sering
 seldom,jurang
 sometimes,karang karang
 avoid,hindari
-die, meninggal:memati
+die,meninggal:memati
 stay safe,tetap aman
 heavily,derus:gede
 thunder,petir
@@ -98,4 +98,4 @@ across,seberang
 through,lewat
 tired,capek:ngantuk
 powder,bubuk
-
+tool,alat
