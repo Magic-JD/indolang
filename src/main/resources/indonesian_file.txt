@@ -287,3 +287,56 @@ upside down,terbalik
 sheep,lomba
 thicker,terbal:terbel
 thin,tipis
+drunk with friends,mabora
+difference,berdain
+maybe,kayaknya
+dude,cuy
+yesterday evening,semalam:tadi malam
+help to find,carikan:cariin
+one more time,sekali lagi
+less,kurang
+cannot hear,ga kedengaran
+slowly,pelan
+talk too much,bawel
+noisy,brisik
+martial arts,pencak silat
+swimming,renang
+meet,bertemu:ketemu
+vollyball,voli
+flexible,lentar
+sweating,keringatan
+running,lari
+chess,catur
+good at it,jago
+wrestling,gulat
+archery,punaham
+muscle,otot
+stretch,meregangkan
+lean,membungkukan
+touch,menyentuh
+around,memutar
+neck,leher
+movement,gerakan
+hold,tahan
+beginner,permula
+heart,jantung
+next,kemudian:selanjutnya
+arrange,mengatur
+breath,napas
+clap your hands,tempuk tangan
+breath in,ambil napas
+breath out,buang napas
+hold breath,tahan napas
+jump,lompat
+squat,jongkok
+waist,pinggang
+shoulders,punduk
+bow,bungkuk
+rotate,putar
+shoulder,bahu
+stretch,regangkan
+go out,cabut
+like that,gitu
+lousy,payah
+ok then,yaudah
+let you know,kabarin
