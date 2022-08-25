@@ -98,4 +98,192 @@ across,seberang
 through,lewat
 tired,capek:ngantuk
 powder,bubuk
+wrap,bungkus
+nervous,gugup:grogi
+culture,budaya
+excited,seru
+confident,percaya diri
+less,kurang
+answer,jawab
+show,tunjukkan
+friendly,ramah
+survive,bertahan
+regret,kapok
+safe,aman
+calm,tenang
+cool temperature,sejuk
+too hot,adem
+leech,lintah
+cage,kandang
+village,desa
+pet,peliharaan
+wave,ombak
+sky,langit
+atomosphere,suasana
+comfortable,nyaman
+list,daftar
+of course,tentu
+cry,nangis
+happy to,hebat
+travel around,keliling
+peircing,tindikan
+healed,sembuh:pulih
+swollen,bengkak
+follow the rules,tertis
+loud,kencang
+opinion,pendapat
+favourite,kegemaran
+camping,berkeman
+gardening,berkebun
+fishing,memancing
+exercise,berolahraga
+travel,berwista
+adventure,petualangan
+real,nyata
+almost,hampir
+apparently,ternyata
+plant,menanam
+decorate,hias
+organized,teratu
+one time only,sekalian
+hike,mendaki
+magic,sulap
+comfortable,betas
+miss,kangan:rindu
+shrimp,udang
+history,serajah
+adventure,penjelajahan
+war,perang
+scifi,fiksi ilmiah
+for example,misalnya
+fight,berkelahi
+download,mengunduh
+overtime,lembur
+reprimand,menegur
+main idea,inti
+reply,balas
+action,laga
+faithful,setia
+weekend,akir pekan
+violance,kekerasan
+sin,adegan
+schedule,jadual
+open minded,biterbuka
+buy food,jajan
+run,lari
+use weights,angkat beban
+bitter,pahit
+salty,asin
+sour,asam
+global warming,permanasan global
+easy,mudah:gampang
+sheep,domba
+vomit,muntah
+sunset,terbenam
+sunrise,terbit
+light,cahaya
+fireplace,perapian
+crime,kiminal
+hope,madah madahnya:semoga
+exactly,tepat
+raindrop,tetes
+drizzle,gerimis
+reading material,bacaan
+expression,ungkapan
+employee,karyawan
+security,satpam
+soldier,tentara:prajurit
+base,pangkalan
+patrol,berkeliling
+approx,kira kira
+deliver,mengantar
+figure,kokol
+all day,sepanjang hari:seharian
+train line,rel kereta
+statue,patung
+curious,penasaran
+kettle,teko
+adapt,adaptasi
+bankrupt,bangkrut
+depend,tergantung
+saving,menabung
+guest,tamu
+house on stilts,rumah panjang
+dove,merpati
+inhabit,warga
+invite,mengundang
+party,syukuram
+invited,dinndang
+neighbour,tetangga
+flooding,banjir
+earthquake,gempa bumi
+match,cocokkan
+hallway,lorong
+experience,mengahumi
+drive,menyetir
+independance day,hari kemerdekaan
+switch,bergantihan
+exciting,seru
+mistake,kesalahkan
+ear,terlingah
+permission,ijin
+breath,benafas
+tank,tabug
+take off,lepas:copot
+thing,alat
+borrow,pinjam
+attack,menyerang
+seal,anjing laut
+reef,batu karang
+msg,penyedap rasa
+father:mother,bokap:nyokap
+guess,tebak
+hard,sulit:susah
+easy,mudah:gampang
+then,trus
+like,seperti:kayak
+teach,ajarin
+speak,bicara:nyomong
+chat,ngobrol
+i think (uncertain),kayaknya
+only,hanya:cuma
+clarify,menjalaskan:jelasin
+confident,pede
+wear,dengar:denger
+because,karena:soalnya
+polite,sopan
+scolded,diomelin
+he:she,belian:dia
+not fluent,kaku
+are you serious,masa sih
+i don't understand,ge ngerti
+move,geruk
+lazy to move,mager
+overreact,lebuy
+spill your heart,curhat
+get coffee,nyopi
+while,sambil
+reply,balas:bales
 tool,alat
+make,buat:bikin
+ask,tanya
+experience,pengalaman
+interview,wawancara
+smile,senyum
+laugh,tertawa:ketawa
+lucky,beruntung
+on time,tempat waktu
+late,terlambat:terlat
+early,lebih awal
+give information,kabarin
+the day after tomorrow,lusa
+two faced,ular berkepula dua
+secret,rahasia
+intentionally,sengaja
+unintentionally,ga sengaja
+gossip,ember
+innocent,polos
+upside down,terbalik
+sheep,lomba
+thicker,terbal:terbel
+thin,tipis
