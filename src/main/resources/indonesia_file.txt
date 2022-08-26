@@ -1,0 +1,354 @@
+adaptasi,adapt,2022-08-26T16:46:24.968392100+07:00[Asia/Bangkok],0
+adegan,sin,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+adem,too hot,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+ajarin,teach,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+akir pekan,weekend,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+aksen,accent,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+alasan,reason,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+alat,tool,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+aman,safe,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+ambil napas,breath in,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+angkat beban,use weights,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+anjing laut,seal,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+asam,sour,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+asin,salty,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+ayah,father,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bacaan,reading material,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bahu,shoulder,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bakal,lunchbox,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+baku,formal,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+balas,reply,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bales,reply,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bangkrut,bankrupt,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+banjir,flooding,2022-08-26T16:46:24.978393500+07:00[Asia/Bangkok],0
+bapak,father,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+batu karang,reef,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bawel,talk too much,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+belian,she:he,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+benafas,breath,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bengkak,swollen,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+beracun,poisonous,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berbeda,different,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berbelanja,shopping,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berdain,difference,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berdasarkan,based on,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bergantihan,switch,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berkaitan,related,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berkebun,gardening,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berkelahi,fight,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berkeliling,patrol,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berkeman,camping,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bernang,swimming,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berolahraga,exercise,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bersudara,sibling,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bertahan,survive,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bertemu,meet,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+beruntung,lucky,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+berwista,travel,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+besan,the parents of your childs spouse,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+betas,comfortable,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bicara,speak,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bikin,make,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+biterbuka,open minded,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bokap,mother:father,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+brisik,noisy,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+buang napas,breath out,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+buat,make,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bubuk,powder,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+budaya,culture,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bundaran,roundabout,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bungkuk,bow,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bungkus,wrap,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+bungsa,youngest,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cabut,go out:pull out,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cahaya,light,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+capek,tired,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cariin,help to find,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+carikan,help to find,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+catur,chess,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cerah,sunny,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cerai,divorce,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cocokkan,match,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+copot,take off,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cuma,only,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+curhat,spill your heart,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+cuy,dude,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+daftar,list,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+dengar,wear,2022-08-26T16:46:24.979394400+07:00[Asia/Bangkok],0
+denger,wear,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+derus,heavily,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+desa,village,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+dia,she:he,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+dinndang,invited,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+diomelin,scolded,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+domba,sheep,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+dua duanya,both,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ember,gossip,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+fiksi ilmiah,scifi,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ga kedengaran,cannot hear,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ga sengaja,unintentionally,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gaji,salary,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gampang,easy,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ge ngerti,i don't understand,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gede,heavily,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gelombang udara panas,heatwave,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gempa bumi,earthquake,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gerakan,movement,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gerimis,drizzle,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+geruk,move,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gitu,like that,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+grogi,nervous,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gudung,warehouse,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gugup,nervous,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+gulat,wrestling,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hafal,memorize,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hampir,almost,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hanya,only,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hari kemerdekaan,independance day,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hebat,happy to,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hias,decorate,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+hindari,avoid,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ibu kota,capital,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+ijin,permission,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+inti,main idea,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jadual,schedule,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jago,good at it,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jajan,buy food,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jantung,heart,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jawab,answer,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jelasin,clarify,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jongkok,squat,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+jurang,seldom,2022-08-26T16:46:24.980394600+07:00[Asia/Bangkok],0
+kabarin,let you know,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kaku,not fluent,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kandang,cage,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kangan,miss,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kapok,regret,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+karang karang,sometimes,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+karena,because,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+karyawan,employee,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kasar,rough language,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kayak,like,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kayaknya,maybe,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kecuali,except,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kegemaran,favourite,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kegiatan,activities,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kekerasan,violance,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kelang,bracelet,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+keliling,travel around,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kemudian,next,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kencang,loud,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+keringatan,sweating,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kesalahkan,mistake,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+ketawa,laugh,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+ketemu,meet,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kilat,lightning,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kiminal,crime,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kira kira,approx,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kokol,figure,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kosakata,vocabulary,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kuliah,study in university,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+kurang,less,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+laga,action,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+laku,space,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+langit,sky,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+langsung,straight away,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lari,running,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+latihan,practice,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lebih awal,early,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lebih lambat,later,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lebuy,overreact,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+leher,neck,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lembur,overtime,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lentar,flexible,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lepas,take off,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lewat,through,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lintah,leech,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lomba,sheep,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lompat,jump,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lorong,hallway,2022-08-26T16:46:24.981395700+07:00[Asia/Bangkok],0
+lumayan,reasonable:quite,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+lusa,the day after tomorrow,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mabora,drunk with friends,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+madah madahnya,hope,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mager,lazy to move,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+majalah,magazine,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+manhasiswa,university student,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+marbok,drunk,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+masa sih,are you serious,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+memancing,fishing,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+memati,die,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+membungkukan,lean,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+memutar,around,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menabung,saving,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menanam,plant,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mendaki,hike,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mendung,cloudy,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menegur,reprimand,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengahumi,experience,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengangsurnya,pay it off,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengantar,deliver,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengatur,arrange,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengundang,invite,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mengunduh,download,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+meninggal,die,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menjalaskan,clarify,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menjemput,pick up,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menjemur,dry clothes,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyalakan,turn on,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyebutkan,mention,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyelam,diving,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyentuh,touch,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyerang,attack,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyetir,drive,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+menyiapkan,prepare,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+meregangkan,stretch,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+merek,brand,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+merpati,dove,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+misalnya,for example,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+mudah,easy,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+muntah,vomit,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nangis,cry,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+napas,breath,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+ngantuk,tired,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+ngobrol,chat,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+ngomong,btw,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyalain,turn on,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyaman,comfortable,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyata,real,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyokap,mother:father,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyomong,speak,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+nyopi,get coffee,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+ombak,wave,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+otot,muscle,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+pahit,bitter,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+pangkalan,base,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+panjat,climbing,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+pasti,certain,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+patung,statue,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+payah,lousy,2022-08-26T16:46:24.982395100+07:00[Asia/Bangkok],0
+pede,confident,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pelan,slowly,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+peliharaan,pet,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+penasaran,curious,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pencak silat,martial arts,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pendapat,opinion,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pendek,short,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pengalaman,experience,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+penjelajahan,adventure,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+penyedap rasa,msg,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+perang,war,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+perapian,fireplace,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+percaya,believe,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+percaya diri,confident,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+permanasan global,global warming,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+permandungan,view,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+permula,beginner,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pernikahan,wedding,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+petir,thunder,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+petualangan,adventure,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pinggang,waist,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pinggir kota,countryside,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pinjam,borrow,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+polos,innocent,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+prajurit,soldier,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+pulih,healed,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+punaham,archery,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+punduk,shoulders,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+putar,rotate,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+rahasia,secret,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+ramah,friendly,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+rapat,meeting,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+regangkan,stretch,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+rel kereta,train line,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+renang,swimming,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+rindu,miss,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+rumah panjang,house on stilts,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+salung,oldest,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sambil,while,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+satpam,security,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sebelumnya,adjacent,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sebentar ya,hold up,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+seberang,across,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+segara,soon,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+seharian,all day,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sejarah,history,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sejuk,cool temperature,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sekali lagi,one more time,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sekalian,one time only,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+selama,until,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+selanjutnya,next,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+semalam,yesterday evening,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sembuh,healed,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+semoga,hope,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sengaja,intentionally,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+senggang,free time,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+senyum,smile,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sepanjang hari,all day,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+seperti,like,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+serajah,history,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sering,often,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+seru,exciting,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+serum,scared,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+setia,faithful,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sibuk,busy,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+singkat,short,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+soalnya,because,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sopan,polite,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+suasana,atomosphere,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+suhu,temperature,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+suku bunga,interest,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sulap,magic,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+sulit,hard,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+supaya,so that,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+surat ijin,licence,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+susah,hard,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+syukuram,party,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tabug,tank,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tadi malam,yesterday evening,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tahan,hold,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tahan napas,hold breath,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tali,rope,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tamu,guest,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tanda,sign,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tanya,ask,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tari,dance,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tawar,bargain,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tebak,guess,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+teko,kettle,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tempat waktu,on time,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tempuk tangan,clap your hands,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tenang,calm,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tentara,soldier,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tentu,of course,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tepat,exactly,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+teratu,organized,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terbal,thicker,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terbalik,upside down,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terbel,thicker,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terbenam,sunset,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terbit,sunrise,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tergantung,depend,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terlambat,late,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terlat,late,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+terlingah,ear,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+ternyata,apparently,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tertawa,laugh,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tertis,follow the rules,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tetangga,neighbour,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tetap aman,stay safe,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tetes,raindrop,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tindikan,peircing,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tipis,thin,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+toko,shop,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+trus,then,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tunjukkan,show,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+ubur ubur,jellyfish,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+udang,shrimp,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+ular berkepula dua,two faced,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+ungkapan,expression,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+voli,vollyball,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+waktu luang,free time,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+warga,inhabit,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+wawancara,interview,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0
+yaudah,ok then,2022-08-26T16:46:24.985394600+07:00[Asia/Bangkok],0

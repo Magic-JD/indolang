@@ -32,6 +32,6 @@ public class DictionaryImpl implements Dictionary {
     private String convertToString(List<Pair<String, Set<String>>> list) {
         return list.stream()
                 .map(pair -> String.format("%s = %s\n", pair.getFirst(), String.join("/", pair.getSecond())))
-                .collect(Collectors.joining("|      |"));
+                .collect(Collectors.joining());
     }
 }
