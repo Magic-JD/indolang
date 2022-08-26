@@ -19,7 +19,7 @@ public class TestRetriever {
     }
 
     public String getIndonesianWord() {
-        return getValidWord(wordsetCompiler.getWordDataEnglish());
+        return getValidWord(wordsetCompiler.getWordDataIndonesian());
     }
 
     private String getValidWord(List<WordData> wordDataList) {

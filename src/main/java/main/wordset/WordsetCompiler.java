@@ -17,6 +17,8 @@ public class WordsetCompiler {
     private static final String ENGLISH_WORDSET = "src/main/resources/english_file.txt"; //Autoload this properly from properties later
     private final Map<String, Set<String>> englishToIndonesian;
     private final Map<String, Set<String>> indonesianToEnglish;
+    private List<WordData> wordDataEnglish;
+    private List<WordData> wordDataIndonesian;
 
 
     public WordsetCompiler() {
@@ -55,11 +57,17 @@ public class WordsetCompiler {
     }
 
     public List<WordData> getWordDataIndonesian() {
-        return getWordData(INDONESIAN_WORDSET);
+        if (wordDataIndonesian == null) {
+            wordDataIndonesian = getWordData(INDONESIAN_WORDSET);
+        }
+        return wordDataIndonesian;
     }
 
     public List<WordData> getWordDataEnglish() {
-        return getWordData(ENGLISH_WORDSET);
+        if (wordDataEnglish == null) {
+            wordDataEnglish = getWordData(ENGLISH_WORDSET);
+        }
+        return wordDataEnglish;
     }
 
     private List<WordData> getWordData(String fileName) {
