@@ -335,7 +335,7 @@ bow,bungkuk
 rotate,putar
 shoulder,bahu
 stretch,regangkan
-go out,cabut
+go out:pull out,cabut
 like that,gitu
 lousy,payah
 ok then,yaudah

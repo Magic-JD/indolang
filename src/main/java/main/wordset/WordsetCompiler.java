@@ -5,44 +5,49 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.security.KeyPair;
 import java.util.*;
-import java.util.function.BiConsumer;
+import java.util.stream.Collectors;
 
 @Component
 public class WordsetCompiler {
 
     private static final String indonesiaFile = "src/main/resources/indonesian_file.txt"; //Autoload this properly from properties later
-    private final Map<String, String> englishToIndonesian;
-    private final Map<String, String> indonesianToEnglish;
+    private final Map<String, Set<String>> englishToIndonesian;
+    private final Map<String, Set<String>> indonesianToEnglish;
 
 
-    public WordsetCompiler(){
+    public WordsetCompiler() {
         englishToIndonesian = new TreeMap<>();
         indonesianToEnglish = new TreeMap<>();
         try {
             File file = new File(indonesiaFile);
             Scanner scanner = new Scanner(file);
-            while(scanner.hasNext()){
+            while (scanner.hasNext()) {
                 String translation = scanner.nextLine();
                 String[] info = translation.split(",");
-                englishToIndonesian.put(info[0], info[1]);
-                indonesianToEnglish.put(info[1], info[0]);
+                String[] englishWords = info[0].split(":");
+                String[] indonesianWords = info[1].split(":");
+                for (String englishWord : englishWords) {
+                    englishToIndonesian.put(englishWord, Arrays.stream(indonesianWords).collect(Collectors.toSet()));
+                }
+                for (String indonesianWord : indonesianWords) {
+                    indonesianToEnglish.put(indonesianWord, Arrays.stream(englishWords).collect(Collectors.toSet()));
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public List<Pair<String, String>> getWordsetEnglishOrdered() {
-        var orderedEnglishWordset = new ArrayList<Pair<String, String>>();
-        englishToIndonesian.forEach((a, b) -> orderedEnglishWordset.add(Pair.of(a,b)));
+    public List<Pair<String, Set<String>>> getWordsetEnglishOrdered() {
+        var orderedEnglishWordset = new ArrayList<Pair<String, Set<String>>>();
+        englishToIndonesian.forEach((a, b) -> orderedEnglishWordset.add(Pair.of(a, b)));
         return orderedEnglishWordset;
     }
 
-    public List<Pair<String, String>> getWordsetIndonesianOrdered() {
-        var orderedIndonesianWordset = new ArrayList<Pair<String, String>>();
-        indonesianToEnglish.forEach((a, b) -> orderedIndonesianWordset.add(Pair.of(a,b)));
+    public List<Pair<String, Set<String>>> getWordsetIndonesianOrdered() {
+        var orderedIndonesianWordset = new ArrayList<Pair<String, Set<String>>>();
+        indonesianToEnglish.forEach((a, b) -> orderedIndonesianWordset.add(Pair.of(a, b)));
         return orderedIndonesianWordset;
     }
 }
