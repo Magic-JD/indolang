@@ -1340,3 +1340,84 @@ anger,kemarahan
 claim,klaim
 continent,benua
 mini-cab:bus,angkot
+bike-carriage,becak
+horse and cart,delman
+fare,ongkos
+because,sebab
+print,cetak
+independent,mandiri
+in accordance,sesuai
+knob:button,tombol
+receipt,struk
+method:way,cara
+service,jusa
+agreed,sepukat
+something,sesuatu
+should,seharusnya
+joint venture,putungan
+harassment,pelecehan
+touch,payar
+miss,kangan
+pickpocket,copet
+comfortable,nyaman
+passenger,penumpang
+deal,sepakat
+negotiate,tawar:menawar
+side dish,lauk
+wing,sayap
+perch,hinggap
+branch,dahan
+grain of rice,padi
+side,tepi
+bee,lembah
+wasp,tawan
+spider,labu-labu
+butterfly,kupo-kupo
+cockroach,kecoa
+squirrel,bajing
+mouse,tikus
+cow,sapi
+buffalo,kerbac
+goat,kambing
+horse,kuda
+donkey,keledai
+watermelon,semanka
+jackfruit,nanka
+sleepover,menginap:nginep
+accompany,menemati
+invite,ajak
+shout,teriak
+annoy,ganggu
+bloom,mekar
+tap,keran
+fresh,sejuk:senar
+empty:quiet,sepi
+holy,suci:keramat
+haunted,angker
+incredible,mengah
+strong,kokoh
+spacious,luas
+messy,berantakun
+prayer,doa
+thesis,skripsi
+struggle,perjuangan
+moment,saat
+short,singkat:pendek
+steam,kukus
+boil,rebus
+in a relationship,pacaran:judian
+care,perhatian
+fiber,serat
+salad,mentah
+fishy,amis
+especially,terutama
+offended,tersinggang
+weaker,lebih lemah
+opposite word,lawan kata
+synonym,sinonim
+antonym,antonim
+guest,tamu
+guess,tebak
+fig,buah ara
+firework,kembang api
+congratulations,selamat

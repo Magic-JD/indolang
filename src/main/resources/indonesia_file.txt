@@ -273,7 +273,7 @@ seberang,across,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 segara,soon,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 seharian,all day,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 sejarah,history,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
-sejuk,cool temperature,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
+sejuk,cool temperature:fresh,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 sekali lagi,one more time,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 sekalian,one time only,2022-08-26T16:46:24.983395300+07:00[Asia/Bangkok],0
 selama,until:during,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
@@ -313,7 +313,7 @@ tamu,guest,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 tanda,sign,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 tanya,ask,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 tari,dance,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
-tawar,bargain,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
+tawar,negotiate:bargain,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 tebak,guess,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 teko,kettle,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
 tempat waktu,on time,2022-08-26T16:46:24.984394600+07:00[Asia/Bangkok],0
@@ -474,7 +474,7 @@ burung,bird,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 cabang,branch,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 cair,liquid,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 camp,camp,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
-cara,way,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
+cara,method:way,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 cari,find,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 cat,paint,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
 catatan,note,2022-09-13T13:03:14.360189600+07:00[Asia/Bangkok],0
@@ -706,7 +706,7 @@ lebih,more,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lebih baik,better,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lebih dari,over,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lemak,fat,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
-lembah,valley,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
+lembah,bee:valley,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lembut,gentle,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lengan,arm,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
 lengkap,complete,2022-09-13T13:03:14.365190800+07:00[Asia/Bangkok],0
@@ -723,7 +723,7 @@ logam,metal,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 login,log,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 lone,lone,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 lu,you,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
-luas,broad,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
+luas,broad:spacious,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 lubang,hole,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 lulus,pass,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
 lurus,straight,2022-09-13T13:03:14.366190900+07:00[Asia/Bangkok],0
@@ -1090,7 +1090,7 @@ tempat,spot,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 tengah,middle,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 tentang,about,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 tentu saja,course,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
-tepi,edge,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
+tepi,edge:side,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 terbaik,best,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 terbang,fly,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
 terbuka,open,2022-09-13T13:03:14.374192600+07:00[Asia/Bangkok],0
@@ -1156,3 +1156,74 @@ yakin,sure,2022-09-13T13:03:14.375192900+07:00[Asia/Bangkok],0
 yang,whose,2022-09-13T13:03:14.375192900+07:00[Asia/Bangkok],0
 yang modern,modern,2022-09-13T13:03:14.375192900+07:00[Asia/Bangkok],0
 yard,yard,2022-09-13T13:03:14.375192900+07:00[Asia/Bangkok],0
+ajak,invite,2022-09-13T13:36:24.707776900+07:00[Asia/Bangkok],0
+amis,fishy,2022-09-13T13:36:24.707776900+07:00[Asia/Bangkok],0
+angker,haunted,2022-09-13T13:36:24.708776800+07:00[Asia/Bangkok],0
+angkot,bus:mini-cab,2022-09-13T13:36:24.708776800+07:00[Asia/Bangkok],0
+antonim,antonym,2022-09-13T13:36:24.708776800+07:00[Asia/Bangkok],0
+bajing,squirrel,2022-09-13T13:36:24.708776800+07:00[Asia/Bangkok],0
+becak,bike-carriage,2022-09-13T13:36:24.709776900+07:00[Asia/Bangkok],0
+berantakun,messy,2022-09-13T13:36:24.709776900+07:00[Asia/Bangkok],0
+buah ara,fig,2022-09-13T13:36:24.709776900+07:00[Asia/Bangkok],0
+cetak,print,2022-09-13T13:36:24.710777+07:00[Asia/Bangkok],0
+copet,pickpocket,2022-09-13T13:36:24.710777+07:00[Asia/Bangkok],0
+dahan,branch,2022-09-13T13:36:24.710777+07:00[Asia/Bangkok],0
+delman,horse and cart,2022-09-13T13:36:24.710777+07:00[Asia/Bangkok],0
+doa,prayer,2022-09-13T13:36:24.710777+07:00[Asia/Bangkok],0
+ganggu,annoy,2022-09-13T13:36:24.711777100+07:00[Asia/Bangkok],0
+hinggap,perch,2022-09-13T13:36:24.711777100+07:00[Asia/Bangkok],0
+judian,in a relationship,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+jusa,service,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+kambing,goat,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+kecoa,cockroach,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+keledai,donkey,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+kembang api,firework,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+keramat,holy,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+keran,tap,2022-09-13T13:36:24.712777300+07:00[Asia/Bangkok],0
+kerbac,buffalo,2022-09-13T13:36:24.713777500+07:00[Asia/Bangkok],0
+kokoh,strong,2022-09-13T13:36:24.713777500+07:00[Asia/Bangkok],0
+kukus,steam,2022-09-13T13:36:24.713777500+07:00[Asia/Bangkok],0
+kupo-kupo,butterfly,2022-09-13T13:36:24.713777500+07:00[Asia/Bangkok],0
+labu-labu,spider,2022-09-13T13:36:24.713777500+07:00[Asia/Bangkok],0
+lauk,side dish,2022-09-13T13:36:24.714778700+07:00[Asia/Bangkok],0
+lawan kata,opposite word,2022-09-13T13:36:24.714778700+07:00[Asia/Bangkok],0
+lebih lemah,weaker,2022-09-13T13:36:24.714778700+07:00[Asia/Bangkok],0
+mandiri,independent,2022-09-13T13:36:24.715778600+07:00[Asia/Bangkok],0
+mekar,bloom,2022-09-13T13:36:24.715778600+07:00[Asia/Bangkok],0
+menawar,negotiate,2022-09-13T13:36:24.716778400+07:00[Asia/Bangkok],0
+menemati,accompany,2022-09-13T13:36:24.716778400+07:00[Asia/Bangkok],0
+mengah,incredible,2022-09-13T13:36:24.716778400+07:00[Asia/Bangkok],0
+menginap,sleepover,2022-09-13T13:36:24.717778400+07:00[Asia/Bangkok],0
+mentah,salad,2022-09-13T13:36:24.717778400+07:00[Asia/Bangkok],0
+nanka,jackfruit,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+nginep,sleepover,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+ongkos,fare,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+pacaran,in a relationship,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+padi,grain of rice,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+payar,touch,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+pelecehan,harassment,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+penumpang,passenger,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+perhatian,care,2022-09-13T13:36:24.718778700+07:00[Asia/Bangkok],0
+perjuangan,struggle,2022-09-13T13:36:24.719779600+07:00[Asia/Bangkok],0
+putungan,joint venture,2022-09-13T13:36:24.719779600+07:00[Asia/Bangkok],0
+rebus,boil,2022-09-13T13:36:24.720779400+07:00[Asia/Bangkok],0
+sebab,because,2022-09-13T13:36:24.720779400+07:00[Asia/Bangkok],0
+seharusnya,should,2022-09-13T13:36:24.720779400+07:00[Asia/Bangkok],0
+selamat,congratulations,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+semanka,watermelon,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+senar,fresh,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sepakat,deal,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sepi,quiet:empty,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sepukat,agreed,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+serat,fiber,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sesuai,in accordance,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sesuatu,something,2022-09-13T13:36:24.721779800+07:00[Asia/Bangkok],0
+sinonim,synonym,2022-09-13T13:36:24.722779800+07:00[Asia/Bangkok],0
+skripsi,thesis,2022-09-13T13:36:24.722779800+07:00[Asia/Bangkok],0
+struk,receipt,2022-09-13T13:36:24.722779800+07:00[Asia/Bangkok],0
+suci,holy,2022-09-13T13:36:24.722779800+07:00[Asia/Bangkok],0
+tawan,wasp,2022-09-13T13:36:24.722779800+07:00[Asia/Bangkok],0
+teriak,shout,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
+tersinggang,offended,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
+tikus,mouse,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
+tombol,button:knob,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
