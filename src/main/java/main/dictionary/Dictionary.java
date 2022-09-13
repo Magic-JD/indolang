@@ -4,5 +4,4 @@ public interface Dictionary {
 
     String englishToIndonesian();
     String indonesianToEnglish();
-
 }

@@ -9,12 +9,11 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static main.config.Constants.*;
+
 @Component
 public class WordsetCompiler {
 
-    private static final String DICTIONARY_FILE = "src/main/resources/dictionary_file.txt"; //Autoload this properly from properties later
-    private static final String INDONESIAN_WORDSET = "src/main/resources/indonesia_file.txt"; //Autoload this properly from properties later
-    private static final String ENGLISH_WORDSET = "src/main/resources/english_file.txt"; //Autoload this properly from properties later
     private final Map<String, Set<String>> englishToIndonesian;
     private final Map<String, Set<String>> indonesianToEnglish;
     private List<WordData> wordDataEnglish;
@@ -24,6 +23,10 @@ public class WordsetCompiler {
     public WordsetCompiler() {
         englishToIndonesian = new TreeMap<>();
         indonesianToEnglish = new TreeMap<>();
+        refreshFromDictionary();
+    }
+
+    public void refreshFromDictionary() {
         try {
             File file = new File(DICTIONARY_FILE);
             Scanner scanner = new Scanner(file);
@@ -85,5 +88,4 @@ public class WordsetCompiler {
         }
         return wordDataCollection;
     }
-
 }

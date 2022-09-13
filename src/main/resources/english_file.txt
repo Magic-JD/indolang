@@ -1289,3 +1289,6 @@ thesis,skripsi,2022-09-13T13:36:24.771790900+07:00[Asia/Bangkok],0
 wasp,tawan,2022-09-13T13:36:24.772791400+07:00[Asia/Bangkok],0
 watermelon,semanka,2022-09-13T13:36:24.772791400+07:00[Asia/Bangkok],0
 weaker,lebih lemah,2022-09-13T13:36:24.772791400+07:00[Asia/Bangkok],0
+get well soon,semoga cepat sembuh,2022-09-13T15:49:34.281398400+07:00[Asia/Bangkok],0
+use up,menghabiskan,2022-09-13T16:46:45.368386100+07:00[Asia/Bangkok],0
+finished,habis,2022-09-13T16:48:15.558816900+07:00[Asia/Bangkok],0

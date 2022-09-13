@@ -1,11 +1,10 @@
 package main.updater.controller;
 
 import main.updater.UpdateFile;
+import main.updater.data.Definition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PreDestroy;
 import java.util.Date;
@@ -28,6 +27,13 @@ public class UpdateController {
     @PutMapping("/dictionary")
     public void updateFromDictionary() {
         updateFile.updateFromDictionaryFile();
+    }
+
+
+    @ResponseBody
+    @PostMapping("/user")
+    public boolean addWordToDictionary(@RequestBody Definition definition) {
+        return updateFile.addWordToDictionary(definition);
     }
 
 }

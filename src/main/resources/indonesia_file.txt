@@ -815,7 +815,7 @@ mengatakan,told,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 mengembangkan,develop,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 menggairahkan,excite,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 menggosok,rub,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
-menghabiskan,spend,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
+menghabiskan,spend:use up,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 mengharapkan,expect,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 menghasilkan,produce,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
 menghitung,count,2022-09-13T13:03:14.368190800+07:00[Asia/Bangkok],0
@@ -1227,3 +1227,5 @@ teriak,shout,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
 tersinggang,offended,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
 tikus,mouse,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
 tombol,button:knob,2022-09-13T13:36:24.723779700+07:00[Asia/Bangkok],0
+semoga cepat sembuh,get well soon,2022-09-13T15:49:34.227387200+07:00[Asia/Bangkok],0
+habis,finished,2022-09-13T16:48:15.506806300+07:00[Asia/Bangkok],0

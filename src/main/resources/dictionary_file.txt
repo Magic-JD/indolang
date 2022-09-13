@@ -1421,3 +1421,6 @@ guess,tebak
 fig,buah ara
 firework,kembang api
 congratulations,selamat
+get well soon,semoga cepat sembuh
+use up,menghabiskan
+finished,habis

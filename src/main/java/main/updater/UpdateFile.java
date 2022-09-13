@@ -1,5 +1,6 @@
 package main.updater;
 
+import main.updater.data.Definition;
 import main.wordset.WordData;
 import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import static main.config.Constants.*;
+
 @Component
 public class UpdateFile {
 
     @Autowired
     WordsetCompiler compiler;
-    private static final String INDONESIAN_WORDSET = "src/main/resources/indonesia_file.txt"; //Autoload this properly from properties later
-    private static final String ENGLISH_WORDSET = "src/main/resources/english_file.txt"; //Autoload this properly from properties later
 
 
     public void updateFileFromMemoryData() {
@@ -37,6 +38,21 @@ public class UpdateFile {
         var wordsetEnglishOrdered = compiler.getWordsetEnglishOrdered();
         updateFileFromWordData(updateWordDataFromDictionary(wordsetIndonesianOrdered, indonesianWordData), INDONESIAN_WORDSET);
         updateFileFromWordData(updateWordDataFromDictionary(wordsetEnglishOrdered, englishWordData), ENGLISH_WORDSET);
+    }
+
+    public boolean addWordToDictionary(Definition definition) {
+        try {
+            var writer = new FileWriter(DICTIONARY_FILE, true);
+            writer.write("\n" + String.join(":", definition.getEnglishWords()) + "," + String.join(":", definition.getIndonesianWords()));
+            writer.flush();
+            writer.close();
+            compiler.refreshFromDictionary();
+            updateFromDictionaryFile();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     private List<WordData> updateWordDataFromDictionary(List<Pair<String, Set<String>>> wordset, List<WordData> wordData) {
