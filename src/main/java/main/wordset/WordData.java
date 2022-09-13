@@ -10,7 +10,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class WordData {
     private final String keyWord;
-    private final Set<String> translations;
+    private Set<String> translations;
     private ZonedDateTime date;
     private Integer sucessfulAnswers;
 
@@ -20,5 +20,14 @@ public class WordData {
 
     public void setSucessfulAnswers(int sucessfulAnswers) {
         this.sucessfulAnswers = sucessfulAnswers;
+    }
+
+    public void addTranslations(Set<String> translations) {
+        this.translations.addAll(translations);
+    }
+
+    @Override
+    public String toString() {
+        return this.getKeyWord() + "," + String.join(":", this.getTranslations()) + "," + this.getDate().toString() + "," + this.sucessfulAnswers;
     }
 }

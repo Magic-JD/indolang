@@ -30,13 +30,13 @@ public class WordsetCompiler {
             while (scanner.hasNext()) {
                 String translation = scanner.nextLine();
                 String[] info = translation.split(",");
-                String[] englishWords = info[0].split(":");
-                String[] indonesianWords = info[1].split(":");
+                Set<String> englishWords = Arrays.stream(info[0].split(":")).map(String::toLowerCase).collect(Collectors.toSet());
+                Set<String> indonesianWords = Arrays.stream(info[1].split(":")).map(String::toLowerCase).collect(Collectors.toSet());
                 for (String englishWord : englishWords) {
-                    englishToIndonesian.put(englishWord, Arrays.stream(indonesianWords).collect(Collectors.toSet()));
+                    englishToIndonesian.put(englishWord, indonesianWords);
                 }
                 for (String indonesianWord : indonesianWords) {
-                    indonesianToEnglish.put(indonesianWord, Arrays.stream(englishWords).collect(Collectors.toSet()));
+                    indonesianToEnglish.put(indonesianWord, englishWords);
                 }
             }
         } catch (FileNotFoundException e) {
