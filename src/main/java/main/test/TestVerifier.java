@@ -33,7 +33,7 @@ public class TestVerifier {
                 return "Correct, the translation of: '" + answer.getAskedQuestion() + "' is: '" + answer.getAnswer() + "'";
             } else {
                 data.setSucessfulAnswers(0);
-                data.setDate(ZonedDateTime.now());
+                data.setDate(calulateDate(data.getSucessfulAnswers()));
                 return "Unfortunately '" + answer.getAnswer() + "' is not the correct translation of '" + answer.getAskedQuestion() + "'. You should have chosen one of " + String.join(", ", data.getTranslations()) + ".";
             }
         }).orElse("Couldn't find the keyword given.");
@@ -42,15 +42,15 @@ public class TestVerifier {
     private ZonedDateTime calulateDate(int noOfSucessfulAnswers) {
         ZonedDateTime time = ZonedDateTime.now();
         if (noOfSucessfulAnswers == 0) {
-            return time;
+            return time.plusMinutes(5);
         } else if (noOfSucessfulAnswers == 1) {
-            return time.plusMinutes(20);
-        } else if (noOfSucessfulAnswers == 2) {
             return time.plusHours(4);
-        } else if (noOfSucessfulAnswers == 3) {
+        } else if (noOfSucessfulAnswers == 2) {
             return time.plusDays(4);
-        } else if (noOfSucessfulAnswers == 4) {
+        } else if (noOfSucessfulAnswers == 3) {
             return time.plusWeeks(4);
+        } else if (noOfSucessfulAnswers == 4) {
+            return time.plusMonths(2);
         } else {
             return time.plusMonths(4);
         }
