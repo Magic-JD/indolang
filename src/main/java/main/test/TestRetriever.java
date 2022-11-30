@@ -1,5 +1,6 @@
 package main.test;
 
+import main.lookup.data.Word;
 import main.wordset.WordData;
 import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class TestRetriever {
@@ -14,20 +16,20 @@ public class TestRetriever {
     @Autowired
     WordsetCompiler wordsetCompiler;
 
-    public String getEnglishWord() {
+    public Optional<Word> getEnglishWord() {
         return getValidWord(wordsetCompiler.getWordDataEnglish());
     }
 
-    public String getIndonesianWord() {
+    public Optional<Word> getIndonesianWord() {
         return getValidWord(wordsetCompiler.getWordDataIndonesian());
     }
 
-    private String getValidWord(List<WordData> wordDataList) {
+    private Optional<Word> getValidWord(List<WordData> wordDataList) {
         return wordDataList.stream()
                 .filter(wordData -> wordData.getDate().isBefore(ZonedDateTime.now()))
                 .findFirst()
                 .map(WordData::getKeyWord)
-                .orElse("Congratulations you have learned all the words");
+                .map(Word::new);
     }
 
 }

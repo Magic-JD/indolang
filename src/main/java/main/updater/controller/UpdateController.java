@@ -3,6 +3,7 @@ package main.updater.controller;
 import main.updater.UpdateFile;
 import main.updater.data.Definition;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +32,10 @@ public class UpdateController {
 
 
     @PostMapping("/user")
-    public boolean addWordToDictionary(@RequestBody Definition definition) {
-        return updateFile.addWordToDictionary(definition);
+    public ResponseEntity<Boolean> addWordToDictionary(@RequestBody Definition definition) {
+        return updateFile.addWordToDictionary(definition) ?
+                ResponseEntity.ok(true) :
+                ResponseEntity.unprocessableEntity().build();
     }
 
 }
