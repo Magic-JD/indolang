@@ -9,4 +9,6 @@ This tool currently does 4 things:
 3) Users can add new words to the dictionary.
 4) Users can test themselves using words from the dictionary.
 
-Note - additional contributer (floorboardMan) is me committing with a device linked to another account. 
+Notes:
+- additional contributer (floorboardMan) is me committing with a device linked to another account.
+- The application.properties file has been replaced with an example file which shows the structure without showing my password.
