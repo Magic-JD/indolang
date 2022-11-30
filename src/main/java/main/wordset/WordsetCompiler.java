@@ -1,64 +1,72 @@
 package main.wordset;
 
+import main.database.model.DictionaryItem;
+import main.database.repository.DictionaryRepository;
 import main.lookup.data.Definitions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static main.config.Constants.*;
+import static main.config.Constants.ENGLISH_WORDSET;
+import static main.config.Constants.INDONESIAN_WORDSET;
 
 @Component
 public class WordsetCompiler {
 
-    private final Map<String, Set<String>> englishToIndonesian;
-    private final Map<String, Set<String>> indonesianToEnglish;
+    private List<Definitions> englishToIndonesian;
+    private List<Definitions> indonesianToEnglish;
     private List<WordData> wordDataEnglish;
     private List<WordData> wordDataIndonesian;
 
+    @Autowired
+    DictionaryRepository dicItemRep;
 
-    public WordsetCompiler() {
-        englishToIndonesian = new TreeMap<>();
-        indonesianToEnglish = new TreeMap<>();
-        refreshFromDictionary();
+    @PostConstruct
+    private void refreshFromDictionary() {
+        Map<String, Set<String>> eTI = new HashMap<>();
+        Map<String, Set<String>> iTE = new HashMap<>();
+        List<DictionaryItem> all = dicItemRep.findAll();
+        for (DictionaryItem d : all) {
+            String en = d.getEnglishWord();
+            String in = d.getIndonesianWord();
+            populateMap(en, in, eTI);
+            populateMap(in, en, iTE);
+        }
+        englishToIndonesian = sortedDefinitions(eTI);
+        indonesianToEnglish = sortedDefinitions(iTE);
     }
 
-    public void refreshFromDictionary() {
-        try {
-            File file = new File(DICTIONARY_FILE);
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                String translation = scanner.nextLine();
-                String[] info = translation.split(",");
-                Set<String> englishWords = Arrays.stream(info[0].split(":")).map(String::toLowerCase).collect(Collectors.toSet());
-                Set<String> indonesianWords = Arrays.stream(info[1].split(":")).map(String::toLowerCase).collect(Collectors.toSet());
-                for (String englishWord : englishWords) {
-                    englishToIndonesian.put(englishWord, indonesianWords);
-                }
-                for (String indonesianWord : indonesianWords) {
-                    indonesianToEnglish.put(indonesianWord, englishWords);
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+    private void populateMap(String key, String value, Map<String, Set<String>> map) {
+        if (map.containsKey(key)) {
+            Set<String> set = map.get(key);
+            set.add(value);
+            map.put(key, set);
+        } else {
+            HashSet<String> set = new HashSet<>();
+            set.add(value);
+            map.put(key, set);
         }
     }
 
+    private List<Definitions> sortedDefinitions(Map<String, Set<String>> map) {
+        return map.entrySet().stream()
+                .map(e -> new Definitions(e.getKey(), e.getValue()))
+                .sorted(Comparator.comparing(Definitions::getWord))
+                .collect(Collectors.toList());
+    }
+
     public List<Definitions> getWordsetEnglishOrdered() {
-        return getWordsetOrdered(englishToIndonesian);
+        return englishToIndonesian;
     }
 
     public List<Definitions> getWordsetIndonesianOrdered() {
-        return getWordsetOrdered(indonesianToEnglish);
-    }
-
-    public List<Definitions> getWordsetOrdered(Map<String, Set<String>> dic) {
-        var ordered = new ArrayList<Definitions>();
-        dic.forEach((key, value) -> ordered.add(new Definitions(key, value)));
-        return ordered;
+        return indonesianToEnglish;
     }
 
     public List<WordData> getWordDataIndonesian() {

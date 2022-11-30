@@ -1,5 +1,7 @@
 package main.updater;
 
+import main.database.model.DictionaryItem;
+import main.database.repository.DictionaryRepository;
 import main.lookup.data.Definitions;
 import main.updater.data.Definition;
 import main.wordset.WordData;
@@ -15,13 +17,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static main.config.Constants.*;
+import static main.config.Constants.ENGLISH_WORDSET;
+import static main.config.Constants.INDONESIAN_WORDSET;
 
 @Component
 public class UpdateFile {
 
     @Autowired
     WordsetCompiler compiler;
+
+    @Autowired
+    DictionaryRepository dicItemRep;
 
 
     public void updateFileFromMemoryData() {
@@ -41,18 +47,13 @@ public class UpdateFile {
     }
 
     public boolean addWordToDictionary(Definition definition) {
-        try {
-            var writer = new FileWriter(DICTIONARY_FILE, true);
-            writer.write("\n" + String.join(":", definition.getEnglishWords()) + "," + String.join(":", definition.getIndonesianWords()));
-            writer.flush();
-            writer.close();
-            compiler.refreshFromDictionary();
-            updateFromDictionaryFile();
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
+        long count = dicItemRep.count();
+        for (String en : definition.getEnglishWords()) {
+            for (String in : definition.getIndonesianWords()) {
+                dicItemRep.save(new DictionaryItem(en, in));
+            }
         }
+        return dicItemRep.count() > count;
     }
 
     private List<WordData> updateWordDataFromDictionary(List<Definitions> wordset, List<WordData> wordData) {
