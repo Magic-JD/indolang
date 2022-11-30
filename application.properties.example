@@ -1,0 +1,2 @@
+spring.data.mongodb.uri=mongodb+srv://<username>:<pwd>@<cluster>.mongodb.net/indolang
+spring.data.mongodb.database=indolang
