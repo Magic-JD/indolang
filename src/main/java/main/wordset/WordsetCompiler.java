@@ -1,6 +1,6 @@
 package main.wordset;
 
-import org.springframework.data.util.Pair;
+import main.lookup.data.Definitions;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -47,30 +47,33 @@ public class WordsetCompiler {
         }
     }
 
-    public List<Pair<String, Set<String>>> getWordsetEnglishOrdered() {
-        var orderedEnglishWordset = new ArrayList<Pair<String, Set<String>>>();
-        englishToIndonesian.forEach((a, b) -> orderedEnglishWordset.add(Pair.of(a, b)));
-        return orderedEnglishWordset;
+    public List<Definitions> getWordsetEnglishOrdered() {
+        return getWordsetOrdered(englishToIndonesian);
     }
 
-    public List<Pair<String, Set<String>>> getWordsetIndonesianOrdered() {
-        var orderedIndonesianWordset = new ArrayList<Pair<String, Set<String>>>();
-        indonesianToEnglish.forEach((a, b) -> orderedIndonesianWordset.add(Pair.of(a, b)));
-        return orderedIndonesianWordset;
+    public List<Definitions> getWordsetIndonesianOrdered() {
+        return getWordsetOrdered(indonesianToEnglish);
+    }
+
+    public List<Definitions> getWordsetOrdered(Map<String, Set<String>> dic) {
+        var ordered = new ArrayList<Definitions>();
+        dic.forEach((key, value) -> ordered.add(new Definitions(key, value)));
+        return ordered;
     }
 
     public List<WordData> getWordDataIndonesian() {
-        if (wordDataIndonesian == null) {
-            wordDataIndonesian = getWordData(INDONESIAN_WORDSET);
-        }
-        return wordDataIndonesian;
+        return getWordData(wordDataIndonesian, INDONESIAN_WORDSET);
     }
 
     public List<WordData> getWordDataEnglish() {
-        if (wordDataEnglish == null) {
-            wordDataEnglish = getWordData(ENGLISH_WORDSET);
+        return getWordData(wordDataEnglish, ENGLISH_WORDSET);
+    }
+
+    public List<WordData> getWordData(List<WordData> wordData, String location) {
+        if (wordData == null) {
+            wordData = getWordData(location);
         }
-        return wordDataEnglish;
+        return wordData;
     }
 
     private List<WordData> getWordData(String fileName) {
@@ -83,6 +86,7 @@ public class WordsetCompiler {
                 String[] data = wordDataLine.split(",");
                 wordDataCollection.add(new WordData(data[0], Arrays.stream(data[1].split(":")).collect(Collectors.toSet()), ZonedDateTime.parse(data[2]), Integer.valueOf(data[3])));
             }
+            scanner.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

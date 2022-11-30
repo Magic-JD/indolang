@@ -1,48 +1,33 @@
 package main.lookup;
 
+import main.lookup.data.Definitions;
+import main.lookup.data.Word;
 import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Set;
+import java.util.Optional;
 
 @Component
 public class LookupImpl implements Lookup {
 
     @Autowired WordsetCompiler wordsetCompiler;
 
-    public LookupImpl(){}
-
     @Override
-    public String lookupIndonesianWord(String englishWord){
+    public Optional<Definitions> lookupIndonesianWord(Word englishWord) {
         return wordFinder(wordsetCompiler.getWordsetEnglishOrdered(), englishWord);
     }
 
     @Override
-    public String lookupEnglishWord(String indonesianWord){
+    public Optional<Definitions> lookupEnglishWord(Word indonesianWord) {
         return wordFinder(wordsetCompiler.getWordsetIndonesianOrdered(), indonesianWord);
 
     }
 
-    private String wordFinder(List<Pair<String, Set<String>>> wordset, String word) {
+    private Optional<Definitions> wordFinder(List<Definitions> wordset, Word word) {
         return wordset.stream()
-                .filter(pair -> pair.getFirst().equals(word))
-                .findFirst()
-                .map(Pair::getSecond)
-                .map(words -> {
-                    StringBuilder stringBuffer = new StringBuilder();
-                    int count = 1;
-                    for (String translatedWord : words) {
-                        stringBuffer.append(count)
-                                .append(") ")
-                                .append(translatedWord)
-                                .append("\n");
-                        count++;
-                    }
-                    return stringBuffer.toString();
-                })
-                .orElse("Kata ini gak ada");
+                .filter(def -> def.getWord().equals(word.getWord()))
+                .findFirst();
     }
 }

@@ -30,7 +30,6 @@ public class UpdateController {
     }
 
 
-    @ResponseBody
     @PostMapping("/user")
     public boolean addWordToDictionary(@RequestBody Definition definition) {
         return updateFile.addWordToDictionary(definition);

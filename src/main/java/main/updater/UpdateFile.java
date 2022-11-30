@@ -1,10 +1,10 @@
 package main.updater;
 
+import main.lookup.data.Definitions;
 import main.updater.data.Definition;
 import main.wordset.WordData;
 import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -55,16 +55,16 @@ public class UpdateFile {
         }
     }
 
-    private List<WordData> updateWordDataFromDictionary(List<Pair<String, Set<String>>> wordset, List<WordData> wordData) {
-        for (var pair : wordset) {
-            String olWord = pair.getFirst();
-            Set<String> translations = pair.getSecond();
-            Optional<WordData> matchingWordData = wordData.stream().filter(wd -> wd.getKeyWord().equals(olWord)).findFirst();
+    private List<WordData> updateWordDataFromDictionary(List<Definitions> wordset, List<WordData> wordData) {
+        for (var def : wordset) {
+            String oldWord = def.getWord();
+            Set<String> translations = def.getWordDefinitions();
+            Optional<WordData> matchingWordData = wordData.stream().filter(wd -> wd.getKeyWord().equals(oldWord)).findFirst();
             if (matchingWordData.isPresent()) {
                 WordData existingWordData = matchingWordData.get();
                 existingWordData.addTranslations(translations);
             } else {
-                wordData.add(new WordData(olWord, translations, ZonedDateTime.now(), 0));
+                wordData.add(new WordData(oldWord, translations, ZonedDateTime.now(), 0));
             }
         }
         return wordData;

@@ -1,7 +1,12 @@
 package main.dictionary;
 
+import main.lookup.data.Definitions;
+
+import java.util.List;
+
 public interface Dictionary {
 
-    String englishToIndonesian();
-    String indonesianToEnglish();
+    List<Definitions> englishToIndonesian();
+
+    List<Definitions> indonesianToEnglish();
 }

@@ -1,0 +1,1 @@
+Create table students (ID int primary key, name varchar(50))
