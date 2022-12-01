@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.repository.Query;
 
 public interface UserRepository extends MongoRepository<DbUserDetails, String> {
 
-    @Query("{userName:'?0'}")
-    DbUserDetails findItemByName(String userName);
+    @Query("{username:'?0'}")
+    DbUserDetails findItemByName(String username);
 
     long count();
 }
