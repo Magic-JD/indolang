@@ -1,6 +1,7 @@
 package main;
 
 import main.database.repository.DictionaryRepository;
+import main.database.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableMongoRepositories
 public class Application {
 
+    @Autowired
+    UserRepository userRepository;
     @Autowired
     DictionaryRepository dicItemRep;
 

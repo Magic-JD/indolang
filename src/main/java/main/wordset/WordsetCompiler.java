@@ -13,9 +13,6 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static main.config.Constants.ENGLISH_WORDSET;
-import static main.config.Constants.INDONESIAN_WORDSET;
-
 @Component
 public class WordsetCompiler {
 
@@ -70,11 +67,11 @@ public class WordsetCompiler {
     }
 
     public List<WordData> getWordDataIndonesian() {
-        return getWordData(wordDataIndonesian, INDONESIAN_WORDSET);
+        return getWordData(wordDataIndonesian, "INDONESIAN_WORDSET");
     }
 
     public List<WordData> getWordDataEnglish() {
-        return getWordData(wordDataEnglish, ENGLISH_WORDSET);
+        return getWordData(wordDataEnglish, "ENGLISH_WORDSET");
     }
 
     public List<WordData> getWordData(List<WordData> wordData, String location) {

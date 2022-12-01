@@ -15,7 +15,7 @@ import java.util.List;
 public class DictionaryController {
 
    @Autowired
-   Dictionary dictionary;
+   private Dictionary dictionary;
 
     @GetMapping("/english")
     public ResponseEntity<List<Definitions>> dictionaryEnglish() {
