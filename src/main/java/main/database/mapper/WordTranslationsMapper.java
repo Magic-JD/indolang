@@ -2,6 +2,7 @@ package main.database.mapper;
 
 import main.database.model.DbWordTranslationsItem;
 import main.lookup.data.Definitions;
+import org.bson.types.ObjectId;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class WordTranslationsMapper {
         return item.getKeyWord();
     }
 
-    public String toId(DbWordTranslationsItem item) {
+    public ObjectId toId(DbWordTranslationsItem item) {
         return item.get_id();
     }
 }

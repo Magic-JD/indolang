@@ -7,6 +7,7 @@ import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
 import main.test.data.Answer;
 import main.test.data.Result;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,11 +29,11 @@ public class TestVerifier {
     public Result verifyTest(String username, Answer answer, String language) {
         Optional<DbWordTranslationsItem> translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
         Optional<Set<String>> translations = translationItem.map(mapper::toTranslations);
-        Optional<String> id = translationItem.map(mapper::toId);
+        Optional<ObjectId> id = translationItem.map(mapper::toId);
         //TODO better error handling here
         Set<String> strings = translations.orElseThrow();
         //TODO better error handling here
-        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatching(i, username)).orElseThrow();
+        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatching(username, i)).orElseThrow();
         Result result = getResult(answer, strings);
         if (result.isPass()) {
             item.setSuccessfulAnswers(item.getSuccessfulAnswers() + 1);
