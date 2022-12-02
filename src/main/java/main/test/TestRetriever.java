@@ -26,17 +26,16 @@ public class TestRetriever {
     WordTranslationsMapper wordTranslationsMapper;
 
     public Optional<Word> getWord(String username, String language) {
-        Optional<String> newestBeforeNow = learnerRepository.findNewestBeforeNow(username, ZonedDateTime.now()).map(learnerMapper::toWordId);
-        if (newestBeforeNow.isEmpty()) {
-            Optional<DbWordTranslationsItem> newQuestion = wordTranslationsRepository.findNewQuestion(language, username);
-            newQuestion.ifPresent(translationItem -> learnerRepository.save(new DbLearnerItem(null, translationItem.get_id(), username, ZonedDateTime.now(), 0)));
-            return newQuestion.map(wordTranslationsMapper::toWord).map(Word::new);
+        return learnerRepository
+                .findNewestBeforeNow(username, ZonedDateTime.now())
+                .map(learnerMapper::toWordItem)
+                .map(wordTranslationsMapper::toWord)
+                .map(Word::new).or(() -> getNewQuestion(username, language));
+    }
 
-        } else {
-            return newestBeforeNow
-                    .flatMap(wordTranslationsRepository::findById)
-                    .map(wordTranslationsMapper::toWord)
-                    .map(Word::new);
-        }
+    private Optional<Word> getNewQuestion(String username, String language) {
+        Optional<DbWordTranslationsItem> newQuestion = wordTranslationsRepository.findNewQuestion(language, username);
+        newQuestion.ifPresent(translationItem -> learnerRepository.save(new DbLearnerItem(null, translationItem, username, ZonedDateTime.now(), 0)));
+        return newQuestion.map(wordTranslationsMapper::toWord).map(Word::new);
     }
 }
