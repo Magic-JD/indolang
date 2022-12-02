@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.time.ZonedDateTime;
 
@@ -13,7 +14,8 @@ import java.time.ZonedDateTime;
 public class DbLearnerItem {
     @Id
     private String id;
-    private String wordId;
+    @DocumentReference
+    private DbWordTranslationsItem wordTranslation;
     private String username;
     private ZonedDateTime date;
     private Integer successfulAnswers;
