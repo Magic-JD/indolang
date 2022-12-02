@@ -1,12 +1,12 @@
-package main.test;
+package main.question;
 
 import main.database.mapper.WordTranslationsMapper;
 import main.database.model.DbLearnerItem;
 import main.database.model.DbWordTranslationsItem;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
-import main.test.data.Answer;
-import main.test.data.Result;
+import main.question.data.Answer;
+import main.question.data.Result;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Component
-public class TestVerifier {
+public class QuestionVerifier {
 
     @Autowired
     private WordTranslationsRepository wordTranslationsRepository;

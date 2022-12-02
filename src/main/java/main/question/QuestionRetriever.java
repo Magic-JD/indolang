@@ -1,4 +1,4 @@
-package main.test;
+package main.question;
 
 import main.database.mapper.LearnerMapper;
 import main.database.mapper.WordTranslationsMapper;
@@ -15,7 +15,7 @@ import java.time.ZonedDateTime;
 import java.util.Optional;
 
 @Component
-public class TestRetriever {
+public class QuestionRetriever {
 
     @Autowired
     LearnerRepository learnerRepository;
