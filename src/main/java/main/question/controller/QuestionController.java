@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @Component
-@RequestMapping("/test")
 public class QuestionController {
 
     @Autowired
@@ -22,7 +21,7 @@ public class QuestionController {
     @Autowired
     QuestionVerifier questionVerifier;
 
-    @GetMapping("")
+    @GetMapping("/test")
     @ResponseBody
     public ResponseEntity<Word> testWord(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @RequestBody UserCredentialsDto userCredentialsDto) {
         return questionRetriever.getWord(language, userCredentialsDto.getUsername())
@@ -30,7 +29,7 @@ public class QuestionController {
                 .orElse(ResponseEntity.noContent().build());
     }
 
-    @PostMapping("")
+    @PostMapping("/test")
     @ResponseBody
     public ResponseEntity<Result> validateWord
             (@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language,

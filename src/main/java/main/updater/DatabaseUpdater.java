@@ -14,7 +14,7 @@ public class DatabaseUpdater {
 
     public void updateDatabase(Definition definition, String language) {
         DbWordTranslationsItem item = repository.findByKeyword(definition.getWord(), language)
-                .orElse(new DbWordTranslationsItem(null, language, definition.getWord()));
+                .orElse(new DbWordTranslationsItem(language, definition.getWord()));
         item.addToTranslations(definition.getTranslation());
         repository.save(item);
     }

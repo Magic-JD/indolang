@@ -12,10 +12,10 @@ public interface WordTranslationsRepository extends MongoRepository<DbWordTransl
     @Query(value = "{locale:'?0'}", fields = "{'keyWord' : 1, 'translations' : 1}")
     List<DbWordTranslationsItem> findAllFrom(String locale);
 
-    @Query(value = "{keyWord:'?0', locale:'?0'}", fields = "{'translations' : 1}")
+    @Query(value = "{keyWord: '?0', locale: '?1'}", fields = "{'keyWord' : 1, 'translations' : 1}")
     Optional<DbWordTranslationsItem> findTranslationsFor(String keyWord, String locale);
 
-    @Query("{keyWord:'?0', locale:'?0'}")
+    @Query("{keyWord: '?0', locale: '?1'}")
     Optional<DbWordTranslationsItem> findByKeyword(String keyWord, String locale);
 
 

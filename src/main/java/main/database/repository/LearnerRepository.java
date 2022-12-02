@@ -8,6 +8,6 @@ import org.springframework.data.mongodb.repository.Query;
 import java.util.Optional;
 
 public interface LearnerRepository extends MongoRepository<DbLearnerItem, String> {
-    @Query("{username: '?0', wordId: '?0'}")
+    @Query("{username: '?0', wordId: '?1'}")
     Optional<DbLearnerItem> findMatching(String username, ObjectId wordId);
 }
