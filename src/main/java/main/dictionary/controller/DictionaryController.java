@@ -3,8 +3,10 @@ package main.dictionary.controller;
 import main.dictionary.Dictionary;
 import main.lookup.data.Definitions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,16 +16,11 @@ import java.util.List;
 @RequestMapping("/dictionary")
 public class DictionaryController {
 
-   @Autowired
-   private Dictionary dictionary;
+    @Autowired
+    private Dictionary dictionary;
 
-    @GetMapping("/english")
-    public ResponseEntity<List<Definitions>> dictionaryEnglish() {
-        return ResponseEntity.ok(dictionary.englishToIndonesian());
-    }
-
-    @GetMapping("/indonesian")
-    public ResponseEntity<List<Definitions>> dictionaryIndonesian() {
-        return ResponseEntity.ok(dictionary.indonesianToEnglish());
+    @GetMapping("/")
+    public ResponseEntity<List<Definitions>> dictionary(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+        return ResponseEntity.ok(dictionary.wordsToTranslations(language));
     }
 }

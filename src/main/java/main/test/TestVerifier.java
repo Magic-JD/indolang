@@ -1,50 +1,59 @@
 package main.test;
 
+import main.database.mapper.WordTranslationsMapper;
+import main.database.model.DbLearnerItem;
+import main.database.model.DbWordTranslationsItem;
+import main.database.repository.LearnerRepository;
+import main.database.repository.WordTranslationsRepository;
 import main.test.data.Answer;
 import main.test.data.Result;
-import main.wordset.WordData;
-import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
-import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Component
 public class TestVerifier {
 
     @Autowired
-    WordsetCompiler wordsetCompiler;
+    private WordTranslationsRepository wordTranslationsRepository;
+    @Autowired
+    private WordTranslationsMapper mapper;
+    @Autowired
+    private LearnerRepository learnerRepository;
 
-    public Optional<Result> verifyTestEnglish(Answer answer) {
-        return verifyTest(wordsetCompiler.getWordDataEnglish(), answer);
+
+    public Result verifyTest(String username, Answer answer, String language) {
+        Optional<DbWordTranslationsItem> translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
+        Optional<Set<String>> translations = translationItem.map(mapper::toTranslations);
+        Optional<String> id = translationItem.map(mapper::toId);
+        //TODO better error handling here
+        Set<String> strings = translations.orElseThrow();
+        //TODO better error handling here
+        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatching(i, username)).orElseThrow();
+        Result result = getResult(answer, strings);
+        if (result.isPass()) {
+            item.setSuccessfulAnswers(item.getSuccessfulAnswers() + 1);
+        } else {
+            item.setSuccessfulAnswers(0);
+        }
+        item.setDate(calulateDate(item.getSuccessfulAnswers()));
+        learnerRepository.save(item);
+        return result;
     }
 
-    public Optional<Result> verifyTestIndonesian(Answer answer) {
-        return verifyTest(wordsetCompiler.getWordDataIndonesian(), answer);
-    }
-
-    private Optional<Result> verifyTest(List<WordData> wordDataList, Answer answer) {
-        Optional<WordData> matchingData = wordDataList.stream().filter(wordData -> wordData.getKeyWord().equals(answer.getAskedQuestion())).findFirst();
-        return matchingData.map(data -> {
-            if (data.getTranslations().contains(answer.getAnswer())) {
-                data.setSucessfulAnswers(data.getSucessfulAnswers() + 1);
-                data.setDate(calulateDate(data.getSucessfulAnswers()));
-                return new Result(true,
-                        String.format("Correct, the translation of: '%s' is: '%s'.",
-                                answer.getAskedQuestion(),
-                                answer.getAnswer()));
-            } else {
-                data.setSucessfulAnswers(0);
-                data.setDate(calulateDate(data.getSucessfulAnswers()));
-                return new Result(false,
-                        String.format("Unfortunately '%s' is not the correct translation of '%s'. You should have chosen one of %s.",
-                                answer.getAnswer(),
-                                answer.getAskedQuestion(),
-                                String.join(", ", data.getTranslations())));
-            }
-        });
+    private static Result getResult(Answer answer, Set<String> strings) {
+        return strings.stream()
+                .filter(t -> t.equals(answer.getAnswer()))
+                .findAny().map(s -> new Result(true, String.format("Correct, the translation of: '%s' is: '%s'.",
+                        answer.getAskedQuestion(),
+                        answer.getAnswer())))
+                .orElse(new Result(false, String.format("Unfortunately '%s' is not the correct translation of '%s'. You should have chosen one of %s.",
+                        answer.getAnswer(),
+                        answer.getAskedQuestion(),
+                        String.join(", ", strings))));
     }
 
     private ZonedDateTime calulateDate(int noOfSucessfulAnswers) {

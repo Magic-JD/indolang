@@ -1,4 +1,4 @@
-package main.database.model;
+package main.registration.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

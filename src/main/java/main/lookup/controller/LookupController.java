@@ -4,6 +4,7 @@ import main.lookup.Lookup;
 import main.lookup.data.Definitions;
 import main.lookup.data.Word;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,23 +15,13 @@ public class LookupController {
    @Autowired
    Lookup lookup;
 
-    @GetMapping("/english/{englishWord}")
+    @GetMapping("/{word}")
     @ResponseBody
-    public ResponseEntity<Definitions> lookupEnglish(@PathVariable Word englishWord) {
-        if (englishWord == null || englishWord.getWord() == null) {
+    public ResponseEntity<Definitions> lookup(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @PathVariable Word word) {
+        if (word == null || word.getWord() == null) {
             return ResponseEntity.badRequest().build();
         }
-        return lookup.lookupIndonesianWord(englishWord)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @GetMapping("/indonesian/{indonesianWord}")
-    public ResponseEntity<Definitions> lookupIndonesian(@PathVariable Word indonesianWord) {
-        if (indonesianWord == null || indonesianWord.getWord() == null) {
-            return ResponseEntity.badRequest().build();
-        }
-        return lookup.lookupEnglishWord(indonesianWord)
+        return lookup.lookupWord(language, word)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }

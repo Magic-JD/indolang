@@ -7,8 +7,5 @@ import java.util.Optional;
 
 public interface Lookup {
 
-    Optional<Definitions> lookupIndonesianWord(Word englishWord);
-
-    Optional<Definitions> lookupEnglishWord(Word indonesianWord);
-
+    Optional<Definitions> lookupWord(String language, Word word);
 }

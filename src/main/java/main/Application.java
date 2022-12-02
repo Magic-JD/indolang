@@ -1,6 +1,5 @@
 package main;
 
-import main.database.repository.DictionaryRepository;
 import main.database.repository.UserRepository;
 import main.database.repository.WordTranslationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,7 @@ public class Application {
 
     @Autowired
     UserRepository userRepository;
-    @Autowired
-    DictionaryRepository dicItemRep;
+
     @Autowired
     WordTranslationsRepository wordTranslationsRepository;
 

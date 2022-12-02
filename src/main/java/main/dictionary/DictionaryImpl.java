@@ -1,7 +1,8 @@
 package main.dictionary;
 
+import main.database.mapper.WordTranslationsMapper;
+import main.database.repository.WordTranslationsRepository;
 import main.lookup.data.Definitions;
-import main.wordset.WordsetCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,17 +12,13 @@ import java.util.List;
 public class DictionaryImpl implements Dictionary {
 
     @Autowired
-    WordsetCompiler wordsetCompiler;
+    WordTranslationsRepository wordTranslationsRepository;
+    @Autowired
+    WordTranslationsMapper mapper;
 
     @Override
-    public List<Definitions> englishToIndonesian() {
-        return wordsetCompiler.getWordsetEnglishOrdered();
-    }
-
-    @Override
-    public List<Definitions> indonesianToEnglish() {
-        return wordsetCompiler.getWordsetIndonesianOrdered();
-
+    public List<Definitions> wordsToTranslations(String language) {
+        return mapper.toDefinitionsList(wordTranslationsRepository.findAllFrom(language));
     }
 
 }
