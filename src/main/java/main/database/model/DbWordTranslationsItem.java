@@ -15,5 +15,9 @@ public class DbWordTranslationsItem {
     private final String _id;
     private final String locale;
     private final String keyWord;
-    private final Set<String> translations;
+    private Set<String> translations;
+
+    public void setTranslations(Set<String> translations) {
+        this.translations = translations;
+    }
 }

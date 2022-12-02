@@ -19,4 +19,8 @@ public interface WordTranslationsRepository extends MongoRepository<DbWordTransl
     @Query(value = "{keyWord:'?0', locale:'?0'}", fields = "{'translations' : 1}")
     Optional<DbWordTranslationsItem> findTranslationsFor(String keyWord, String locale);
 
+    @Query(value = "{keyWord:'?0', locale:'?0'}")
+    Optional<DbWordTranslationsItem> findByKeyword(String keyWord, String locale);
+
+
 }
