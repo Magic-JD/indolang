@@ -2,6 +2,7 @@ package main;
 
 import main.database.repository.DictionaryRepository;
 import main.database.repository.UserRepository;
+import main.database.repository.WordTranslationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,8 @@ public class Application {
     UserRepository userRepository;
     @Autowired
     DictionaryRepository dicItemRep;
+    @Autowired
+    WordTranslationsRepository wordTranslationsRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

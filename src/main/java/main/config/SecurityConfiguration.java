@@ -1,6 +1,6 @@
 package main.config;
 
-import main.database.service.DatabaseUserDetailsService;
+import main.registration.service.DatabaseUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

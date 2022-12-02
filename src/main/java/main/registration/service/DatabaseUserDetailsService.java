@@ -1,4 +1,4 @@
-package main.database.service;
+package main.registration.service;
 
 import main.database.mapper.UserDetailsMapper;
 import main.database.model.DbUserDetails;
