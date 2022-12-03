@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/update")
 public class UpdateController {
 
-    @Autowired
-    DatabaseUpdater databaseUpdater;
+    @Autowired DatabaseUpdater databaseUpdater;
 
     @PostMapping("/dictionary")
     @ResponseStatus(HttpStatus.CREATED)
     public void addWordToDictionary(@RequestBody Definition definition,
                                     @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
         databaseUpdater.updateDatabase(definition, language);
-
     }
 
 }

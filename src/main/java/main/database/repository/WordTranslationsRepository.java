@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface WordTranslationsRepository extends MongoRepository<DbWordTranslationsItem, String> {
-
     @Query("{locale:'?0'}")
     List<DbWordTranslationsItem> findAllFrom(String locale);
 
@@ -17,6 +16,4 @@ public interface WordTranslationsRepository extends MongoRepository<DbWordTransl
 
     @Query("{keyWord: '?0', locale: '?1'}")
     Optional<DbWordTranslationsItem> findByKeyword(String keyWord, String locale);
-
-
 }

@@ -6,5 +6,4 @@ import java.util.Optional;
 
 public interface LearnerWordRepository {
     Optional<DbWordTranslationsItem> findNewQuestion(String username, String locale);
-
 }

@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/shutdown")
 public class ShutdownController {
 
-    @Autowired
-    private ApplicationContext context;
+    @Autowired private ApplicationContext context;
 
     @PutMapping("")
     public void close() {

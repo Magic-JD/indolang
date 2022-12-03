@@ -25,7 +25,7 @@ public class RegistrationResource {
     @PostMapping("/registration")
     public ResponseEntity register(@RequestBody UserCredentialsDto userCredentialsDto) {
         if (userRepository.findItemByName(userCredentialsDto.getUsername()) == null) {
-            DbUserDetails user = new DbUserDetails(userCredentialsDto.getUsername(), passwordEncoder.encode(userCredentialsDto.getPassword()), true, Set.of("USER"));
+            var user = new DbUserDetails(userCredentialsDto.getUsername(), passwordEncoder.encode(userCredentialsDto.getPassword()), true, Set.of("USER"));
             userRepository.save(user);
             return ResponseEntity.status(HttpStatus.CREATED).build();
         } else {

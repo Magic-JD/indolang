@@ -1,19 +1,16 @@
 package main.question;
 
 import main.database.mapper.WordTranslationsMapper;
-import main.database.model.DbLearnerItem;
-import main.database.model.DbWordTranslationsItem;
 import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
+import main.exception.Exceptions;
 import main.question.data.Answer;
 import main.question.data.Result;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
-import java.util.Optional;
 import java.util.Set;
 
 @Component
@@ -26,21 +23,22 @@ public class QuestionVerifier {
     @Autowired private LearnerCustomRepository learnerCustomRepository;
 
     public Result verifyTest(String username, Answer answer, String language) {
-        Optional<DbWordTranslationsItem> translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
-        Optional<Set<String>> translations = translationItem.map(mapper::toTranslations);
-        Optional<ObjectId> id = translationItem.map(mapper::toId);
-        //TODO better error handling here
-        Set<String> strings = translations.orElseThrow();
-        //TODO better error handling here
-        DbLearnerItem item = id.flatMap(i -> learnerCustomRepository.findMatchingWord(username, i)).orElseThrow();
-        Result result = getResult(answer, strings);
+        var translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
+        var translations = translationItem
+                .map(mapper::toTranslations)
+                .orElseThrow(Exceptions.TranslationsNotFoundException::new);
+        var learnerItem = translationItem
+                .map(mapper::toId)
+                .flatMap(i -> learnerCustomRepository.findMatchingWord(username, i))
+                .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
+        var result = getResult(answer, translations);
         if (result.isPass()) {
-            item.setSuccessfulAnswers(item.getSuccessfulAnswers() + 1);
+            learnerItem.increaseSuccessfulAnswers();
         } else {
-            item.setSuccessfulAnswers(0);
+            learnerItem.resetSuccessfulAnswers();
         }
-        item.setDate(calulateDate(item.getSuccessfulAnswers()));
-        learnerRepository.save(item);
+        learnerItem.setDate(calulateDate(learnerItem.getSuccessfulAnswers()));
+        learnerRepository.save(learnerItem);
         return result;
     }
 
@@ -57,7 +55,7 @@ public class QuestionVerifier {
     }
 
     private ZonedDateTime calulateDate(int noOfSucessfulAnswers) {
-        ZonedDateTime time = ZonedDateTime.now();
+        var time = ZonedDateTime.now();
         if (noOfSucessfulAnswers == 0) {
             return time.plusMinutes(5);
         } else if (noOfSucessfulAnswers == 1) {

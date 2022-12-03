@@ -3,7 +3,6 @@ package main.question;
 import main.database.mapper.LearnerMapper;
 import main.database.mapper.WordTranslationsMapper;
 import main.database.model.DbLearnerItem;
-import main.database.model.DbWordTranslationsItem;
 import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.LearnerWordRepository;
@@ -37,7 +36,7 @@ public class QuestionRetriever {
     }
 
     private Optional<Word> getNewQuestion(String username, String language) {
-        Optional<DbWordTranslationsItem> newQuestion = learnerWordRepository.findNewQuestion(username, language);
+        var newQuestion = learnerWordRepository.findNewQuestion(username, language);
         newQuestion.ifPresent(translationItem -> learnerRepository.save(new DbLearnerItem(translationItem, username, ZonedDateTime.now(), 0)));
         return newQuestion.map(wordTranslationsMapper::toWord).map(Word::new);
     }

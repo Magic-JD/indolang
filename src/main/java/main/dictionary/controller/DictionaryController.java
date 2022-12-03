@@ -1,7 +1,9 @@
 package main.dictionary.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import main.dictionary.Dictionary;
 import main.lookup.data.Definitions;
+import main.validation.LanguageValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+@Slf4j
 @RestController
 public class DictionaryController {
 
-    @Autowired
-    private Dictionary dictionary;
+    @Autowired private Dictionary dictionary;
+    @Autowired private LanguageValidator languageValidator;
 
     @GetMapping("/dictionary")
     public ResponseEntity<List<Definitions>> dictionary(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+        languageValidator.validateLanguage(language);
         return ResponseEntity.ok(dictionary.wordsToTranslations(language));
     }
 }

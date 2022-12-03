@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabaseUpdater {
 
-    @Autowired
-    WordTranslationsRepository repository;
+    @Autowired WordTranslationsRepository repository;
 
     public void updateDatabase(Definition definition, String language) {
         DbWordTranslationsItem item = repository.findByKeyword(definition.getWord(), language)

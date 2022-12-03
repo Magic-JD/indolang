@@ -8,7 +8,5 @@ import java.util.Optional;
 
 public interface LearnerCustomRepository {
     Optional<DbLearnerItem> findNewestBeforeNow(String username, ZonedDateTime now);
-
     Optional<DbLearnerItem> findMatchingWord(final String username, final ObjectId wordTranslation);
-
 }

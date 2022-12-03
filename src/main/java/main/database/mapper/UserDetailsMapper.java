@@ -11,5 +11,4 @@ public class UserDetailsMapper {
     public UserDetails toUserDetails(DbUserDetails userItem) {
         return new UserDetails(userItem.getPassword(), userItem.getUsername());
     }
-
 }

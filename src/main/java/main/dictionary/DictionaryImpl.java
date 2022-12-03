@@ -11,14 +11,11 @@ import java.util.List;
 @Component
 public class DictionaryImpl implements Dictionary {
 
-    @Autowired
-    WordTranslationsRepository wordTranslationsRepository;
-    @Autowired
-    WordTranslationsMapper mapper;
+    @Autowired WordTranslationsRepository wordTranslationsRepository;
+    @Autowired WordTranslationsMapper mapper;
 
     @Override
     public List<Definitions> wordsToTranslations(String language) {
         return mapper.toDefinitionsList(wordTranslationsRepository.findAllFrom(language));
     }
-
 }
