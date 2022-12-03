@@ -47,9 +47,9 @@ the language given on your 'accept-language' header.
 It will return a response with this form:
 
     {
-        "word": "rope",
+        "word": <The given word>,
         "wordDefinitions": [
-            "tali"
+            <List of all known translations>
         ]
     }
 
@@ -63,7 +63,7 @@ learner database. The user should seek to answer the words with the correct tran
 The response will be in this form:
 
     {
-        "word": "accent"
+        "word": <Word in the language of the 'accept-language' header>
     }
 
 If the user has words they are already being tested on then a word from that database is given to the user. If the user
