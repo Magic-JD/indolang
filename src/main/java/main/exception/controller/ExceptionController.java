@@ -20,7 +20,7 @@ public class ExceptionController {
 
     @ExceptionHandler(Exceptions.WordNotFoundException.class)
     public ResponseEntity<Object> exception(Exceptions.WordNotFoundException exception) {
-        return new ResponseEntity<>("The provided word could not be found in the dictionary.", HttpStatus.PARTIAL_CONTENT);
+        return new ResponseEntity<>("The provided word could not be found in the dictionary.", HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @ExceptionHandler(Exceptions.AllWordsLearnedException.class)
