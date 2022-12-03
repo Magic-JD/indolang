@@ -18,14 +18,14 @@ public class LearnerCustomRepositoryImpl implements LearnerCustomRepository {
     @Autowired MongoTemplate mongoTemplate;
 
     public Optional<DbLearnerItem> findMatchingWord(final String username, final ObjectId wordTranslationId) {
-        Query query = new Query(Criteria.where("username").is(username))
+        var query = new Query(Criteria.where("username").is(username))
                 .addCriteria(Criteria.where("wordTranslation").is(wordTranslationId));
         return Optional.ofNullable(mongoTemplate.findOne(query, DbLearnerItem.class));
     }
 
     @Override
     public Optional<DbLearnerItem> findNewestBeforeNow(String username, ZonedDateTime now) {
-        Query query = new Query(Criteria.where("username").is(username))
+        var query = new Query(Criteria.where("username").is(username))
                 .addCriteria(Criteria.where("date").lt(now))
                 .with(Sort.by(Sort.Direction.DESC, "date"));
         return Optional.ofNullable(mongoTemplate.findOne(query, DbLearnerItem.class));
