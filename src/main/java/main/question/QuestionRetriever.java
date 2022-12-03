@@ -37,8 +37,8 @@ public class QuestionRetriever {
     }
 
     private Optional<Word> getNewQuestion(String username, String language) {
-        Optional<DbWordTranslationsItem> newQuestion = learnerWordRepository.findNewQuestion(language, username);
-        newQuestion.ifPresent(translationItem -> learnerRepository.save(new DbLearnerItem(null, translationItem, username, ZonedDateTime.now(), 0)));
+        Optional<DbWordTranslationsItem> newQuestion = learnerWordRepository.findNewQuestion(username, language);
+        newQuestion.ifPresent(translationItem -> learnerRepository.save(new DbLearnerItem(translationItem, username, ZonedDateTime.now(), 0)));
         return newQuestion.map(wordTranslationsMapper::toWord).map(Word::new);
     }
 }

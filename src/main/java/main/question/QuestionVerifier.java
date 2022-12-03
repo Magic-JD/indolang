@@ -33,7 +33,7 @@ public class QuestionVerifier {
         //TODO better error handling here
         Set<String> strings = translations.orElseThrow();
         //TODO better error handling here
-        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatchingWords(username, i)).orElseThrow();
+        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatchingWord(username, i)).orElseThrow();
         Result result = getResult(answer, strings);
         if (result.isPass()) {
             item.setSuccessfulAnswers(item.getSuccessfulAnswers() + 1);

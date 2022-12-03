@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface WordTranslationsRepository extends MongoRepository<DbWordTranslationsItem, String> {
 
-    @Query(value = "{locale:'?0'}", fields = "{'keyWord' : 1, 'translations' : 1}")
+    @Query("{locale:'?0'}")
     List<DbWordTranslationsItem> findAllFrom(String locale);
 
     @Query(value = "{keyWord: '?0', locale: '?1'}", fields = "{'keyWord' : 1, 'translations' : 1}")
