@@ -1,4 +1,4 @@
-package main.registration;
+package main.registration.controller;
 
 import main.database.model.DbUserDetails;
 import main.database.repository.UserRepository;
@@ -14,12 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Set;
 
 @RestController
-public class RegistrationResource {
+public class RegistrationController {
 
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    @Autowired private UserRepository userRepository;
+    @Autowired private PasswordEncoder passwordEncoder;
 
 
     @PostMapping("/registration")
