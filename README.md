@@ -84,18 +84,14 @@ This is accessed through a post request which requires an input in the form:
 This will then return a response in this style:
 
     {
-        "pass": true,
-        "explanation": "Correct, the translation of: 'accent' is: 'aksen'."
+        "pass": <true, false>,
+        "word": <The word the user tried to translate>,
+        "submittedTranslation": <The translation that the user submitted>
+        "translations":[<A list of all correct translations>]
     }
 
-for a correct answer and:
-
-    {
-        "pass": false,
-        "explanation": "Unfortunately 'pergi' is not the correct translation of 'across'. You should have chosen one of seberang."
-    }
-
-for a failure.
+Which will allow the front end to format the correct response to the user, either telling them they are correct or that
+they are wrong, and they should have chosen one of the correct translations.
 
 ### Update
 

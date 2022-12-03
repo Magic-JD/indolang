@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -50,17 +51,11 @@ public class QuestionVerifierImpl implements QuestionVerifier {
                 .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
     }
 
-    //TODO make front end make the sentence
     private Result getResult(Answer answer, Set<String> strings) {
         return strings.stream()
                 .filter(t -> t.equals(answer.getAnswer()))
-                .findAny().map(s -> new Result(true, String.format("Correct, the translation of: '%s' is: '%s'.",
-                        answer.getAskedQuestion(),
-                        answer.getAnswer())))
-                .orElse(new Result(false, String.format("Unfortunately '%s' is not the correct translation of '%s'. You should have chosen one of %s.",
-                        answer.getAnswer(),
-                        answer.getAskedQuestion(),
-                        String.join(", ", strings))));
+                .findAny().map(s -> new Result(true, answer.getAskedQuestion(), answer.getAnswer(), new HashSet<>()))
+                .orElse(new Result(false, answer.getAskedQuestion(), answer.getAnswer(), strings));
     }
 
     private ZonedDateTime calculateDate(int noOfSuccessfulAnswers) {
