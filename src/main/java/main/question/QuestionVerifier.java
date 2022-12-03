@@ -1,6 +1,8 @@
 package main.question;
 
 import main.database.mapper.WordTranslationsMapper;
+import main.database.model.DbLearnerItem;
+import main.database.model.DbWordTranslationsItem;
 import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
+import java.util.Optional;
 import java.util.Set;
 
 @Component
@@ -24,25 +27,29 @@ public class QuestionVerifier {
 
     public Result verifyTest(String username, Answer answer, String language) {
         var translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
-        var translations = translationItem
-                .map(mapper::toTranslations)
-                .orElseThrow(Exceptions.TranslationsNotFoundException::new);
-        var learnerItem = translationItem
-                .map(mapper::toId)
-                .flatMap(id -> learnerCustomRepository.findMatchingWord(username, id))
-                .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
+        var translations = getTranslationsSet(translationItem);
+        var learnerItem = retrieveLearnerItem(username, translationItem);
         var result = getResult(answer, translations);
-        if (result.isPass()) {
-            learnerItem.increaseSuccessfulAnswers();
-        } else {
-            learnerItem.resetSuccessfulAnswers();
-        }
-        learnerItem.setDate(calulateDate(learnerItem.getSuccessfulAnswers()));
+        learnerItem.updateSuccessfulAnswers(result.isPass());
+        learnerItem.setDate(calculateDate(learnerItem.getSuccessfulAnswers()));
         learnerRepository.save(learnerItem);
         return result;
     }
 
-    private static Result getResult(Answer answer, Set<String> strings) {
+    private Set<String> getTranslationsSet(Optional<DbWordTranslationsItem> translationItem) {
+        return translationItem
+                .map(mapper::toTranslations)
+                .orElseThrow(Exceptions.TranslationsNotFoundException::new);
+    }
+
+    private DbLearnerItem retrieveLearnerItem(String username, Optional<DbWordTranslationsItem> translationItem) {
+        return translationItem
+                .map(mapper::toId)
+                .flatMap(id -> learnerCustomRepository.findMatchingWord(username, id))
+                .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
+    }
+
+    private Result getResult(Answer answer, Set<String> strings) {
         return strings.stream()
                 .filter(t -> t.equals(answer.getAnswer()))
                 .findAny().map(s -> new Result(true, String.format("Correct, the translation of: '%s' is: '%s'.",
@@ -54,17 +61,17 @@ public class QuestionVerifier {
                         String.join(", ", strings))));
     }
 
-    private ZonedDateTime calulateDate(int noOfSucessfulAnswers) {
+    private ZonedDateTime calculateDate(int noOfSuccessfulAnswers) {
         var time = ZonedDateTime.now();
-        if (noOfSucessfulAnswers == 0) {
+        if (noOfSuccessfulAnswers == 0) {
             return time.plusMinutes(5);
-        } else if (noOfSucessfulAnswers == 1) {
+        } else if (noOfSuccessfulAnswers == 1) {
             return time.plusHours(4);
-        } else if (noOfSucessfulAnswers == 2) {
+        } else if (noOfSuccessfulAnswers == 2) {
             return time.plusDays(4);
-        } else if (noOfSucessfulAnswers == 3) {
+        } else if (noOfSuccessfulAnswers == 3) {
             return time.plusWeeks(4);
-        } else if (noOfSucessfulAnswers == 4) {
+        } else if (noOfSuccessfulAnswers == 4) {
             return time.plusMonths(2);
         } else {
             return time.plusMonths(4);

@@ -31,11 +31,11 @@ public class DbLearnerItem {
         this.date = date;
     }
 
-    public void increaseSuccessfulAnswers() {
-        this.successfulAnswers++;
-    }
-
-    public void resetSuccessfulAnswers() {
-        this.successfulAnswers = 0;
+    public void updateSuccessfulAnswers(boolean increase) {
+        if (increase) {
+            successfulAnswers++;
+        } else {
+            successfulAnswers = 0;
+        }
     }
 }
