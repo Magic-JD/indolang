@@ -8,12 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/update")
 public class UpdateController {
 
     @Autowired DatabaseUpdater databaseUpdater;
 
-    @PostMapping("/dictionary")
+    @PostMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void addWordToDictionary(@RequestBody Definition definition,
                                     @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {

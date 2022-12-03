@@ -20,7 +20,7 @@ public class QuestionController {
     @Autowired QuestionVerifier questionVerifier;
     @Autowired LanguageValidator languageValidator;
 
-    @GetMapping("/test")
+    @GetMapping("/question")
     @ResponseBody
     public ResponseEntity<Word> testWord(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -30,7 +30,7 @@ public class QuestionController {
                 .orElseThrow(Exceptions.AllWordsLearnedException::new);
     }
 
-    @PostMapping("/test")
+    @PostMapping("/answer")
     @ResponseBody
     public ResponseEntity<Result> validateWord
             (@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language,
