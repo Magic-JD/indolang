@@ -2,7 +2,7 @@ package main.database.mapper;
 
 
 import main.database.model.DbUserDetails;
-import main.registration.data.UserDetails;
+import main.rest.registration.data.UserDetails;
 import org.springframework.stereotype.Component;
 
 @Component

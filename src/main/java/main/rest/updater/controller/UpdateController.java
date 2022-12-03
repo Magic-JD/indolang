@@ -1,0 +1,23 @@
+package main.rest.updater.controller;
+
+import main.rest.updater.DatabaseUpdater;
+import main.rest.updater.data.Definition;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class UpdateController {
+
+    @Autowired DatabaseUpdater databaseUpdater;
+
+    //TODO put verification here as to who can update
+    @PostMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addWordToDictionary(@RequestBody Definition definition,
+                                    @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+        databaseUpdater.updateDatabase(definition, language);
+    }
+
+}

@@ -1,7 +1,7 @@
 package main.database.mapper;
 
 import main.database.model.DbWordTranslationsItem;
-import main.lookup.data.Definitions;
+import main.rest.lookup.data.Definitions;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Component;
 
