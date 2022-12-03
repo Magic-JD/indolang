@@ -15,6 +15,7 @@ public class LearnerWordRepositoryImpl implements LearnerWordRepository {
     @Autowired WordTranslationsRepository wordTranslationsRepository;
     @Autowired LearnerRepository learnerRepository;
 
+    //TODO this properly
     @Override
     public Optional<DbWordTranslationsItem> findNewQuestion(String username, String language) {
         List<DbWordTranslationsItem> wordTranslationsItems = wordTranslationsRepository.findAllFrom(language);

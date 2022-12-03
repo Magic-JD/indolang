@@ -21,13 +21,9 @@ public class QuestionVerifier {
 
     @Autowired
     private WordTranslationsRepository wordTranslationsRepository;
-    @Autowired
-    private WordTranslationsMapper mapper;
-    @Autowired
-    private LearnerRepository learnerRepository;
-    @Autowired
-    private LearnerCustomRepository learnerCustomRepository;
-
+    @Autowired private WordTranslationsMapper mapper;
+    @Autowired private LearnerRepository learnerRepository;
+    @Autowired private LearnerCustomRepository learnerCustomRepository;
 
     public Result verifyTest(String username, Answer answer, String language) {
         Optional<DbWordTranslationsItem> translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);

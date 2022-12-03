@@ -19,7 +19,6 @@ public class LearnerCustomRepositoryImpl implements LearnerCustomRepository {
 
     @Autowired MongoTemplate mongoTemplate;
 
-    //@org.springframework.data.mongodb.repository.Query("{username: '?0', wordTranslation: '?1'}")
     public Optional<DbLearnerItem> findMatchingWord(final String username, final ObjectId wordTranslation) {
         Query query = new Query(Criteria.where("username").is(username))
                 .addCriteria(Criteria.where("wordTranslation").is(wordTranslation));
