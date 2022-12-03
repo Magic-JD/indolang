@@ -1,13 +1,13 @@
 package main.database.repository;
 
-import main.database.model.DbUserDetails;
+import main.database.model.DbUserItem;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-public interface UserRepository extends MongoRepository<DbUserDetails, String> {
+public interface UserRepository extends MongoRepository<DbUserItem, String> {
 
     @Query("{username:'?0'}")
-    DbUserDetails findItemByName(String username);
+    DbUserItem findItemByName(String username);
 
     long count();
 }

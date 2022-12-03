@@ -9,7 +9,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Document("users")
-public class DbUserDetails {
+public class DbUserItem {
     private final String username;
     private final String password;
     private final boolean enabled;

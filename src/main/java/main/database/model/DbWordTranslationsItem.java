@@ -29,4 +29,8 @@ public class DbWordTranslationsItem {
     public void addToTranslations(String translation) {
         this.translations.add(translation);
     }
+
+    public void removeFromTranslations(String translation) {
+        this.translations.remove(translation);
+    }
 }

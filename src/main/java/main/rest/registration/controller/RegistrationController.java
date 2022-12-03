@@ -1,6 +1,6 @@
 package main.rest.registration.controller;
 
-import main.database.model.DbUserDetails;
+import main.database.model.DbUserItem;
 import main.database.repository.UserRepository;
 import main.rest.model.UserCredentialsDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RegistrationController {
     @PostMapping("/registration")
     public ResponseEntity register(@RequestBody UserCredentialsDto userCredentialsDto) {
         if (userRepository.findItemByName(userCredentialsDto.getUsername()) == null) {
-            var user = new DbUserDetails(userCredentialsDto.getUsername(), passwordEncoder.encode(userCredentialsDto.getPassword()), true, Set.of("USER"));
+            var user = new DbUserItem(userCredentialsDto.getUsername(), passwordEncoder.encode(userCredentialsDto.getPassword()), true, Set.of("USER"));
             userRepository.save(user);
             return ResponseEntity.status(HttpStatus.CREATED).build();
         } else {

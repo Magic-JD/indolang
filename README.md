@@ -5,8 +5,8 @@
 This microservice currently does 3 things using an internal dictionary:
 
 1) It can return any matching words in the opposite language if english or indonesian words are given for it.
-2) Users can add new words to the dictionary.
-3) Users can test themselves using words from the dictionary.
+2) Users can test themselves using words from the dictionary.
+3) Authorized users (ADMIN) can add and remove words to and from the dictionary.
 
 It requires the user to first login and use basic auth. Passwords are hashed and stored in the database. Username and
 password will be required to call any of the endpoints other than registration.
@@ -95,7 +95,7 @@ they are wrong, and they should have chosen one of the correct translations.
 
 ### Update
 
-    /update
+    /update/create
 
 This endpoint is a post that lets you add a new word to the database. It takes an input in the form:
 
@@ -106,6 +106,18 @@ This endpoint is a post that lets you add a new word to the database. It takes a
 
 This will either create a new entry in the database with the word and the translation, or if the word is already in the
 database it will add the translation to the list of translations.
+
+    /update/delete
+
+This endpoint is a post that lets you remove a word from the database. It takes an input in the form:
+
+    {
+        "word": <The word in the language of the 'accept-language' header>,
+        "translation": <The translation of that word in the other language>
+    }
+
+If there are multiple translations for this word in the dictionary it will remove only the given translation. Otherwise,
+it will remove the whole word.
 
 ## Database
 

@@ -14,8 +14,7 @@ public class UpdateController {
     @Autowired DatabaseUpdater databaseUpdater;
     @Autowired LanguageValidator languageValidator;
 
-    //TODO put verification here as to who can update
-    @PostMapping("/update")
+    @PostMapping("/update/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void addWordToDictionary(@RequestBody Definition definition,
                                     @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
@@ -23,4 +22,11 @@ public class UpdateController {
         databaseUpdater.updateDatabase(definition, language);
     }
 
+    @PostMapping("/update/delete")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void removeWordFromDictionary(@RequestBody Definition definition,
+                                         @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+        languageValidator.validateLanguage(language);
+        databaseUpdater.removeFromDatabase(definition, language);
+    }
 }
