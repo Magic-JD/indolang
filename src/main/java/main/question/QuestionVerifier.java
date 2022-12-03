@@ -3,6 +3,7 @@ package main.question;
 import main.database.mapper.WordTranslationsMapper;
 import main.database.model.DbLearnerItem;
 import main.database.model.DbWordTranslationsItem;
+import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
 import main.question.data.Answer;
@@ -24,6 +25,8 @@ public class QuestionVerifier {
     private WordTranslationsMapper mapper;
     @Autowired
     private LearnerRepository learnerRepository;
+    @Autowired
+    private LearnerCustomRepository learnerCustomRepository;
 
 
     public Result verifyTest(String username, Answer answer, String language) {
@@ -33,7 +36,7 @@ public class QuestionVerifier {
         //TODO better error handling here
         Set<String> strings = translations.orElseThrow();
         //TODO better error handling here
-        DbLearnerItem item = id.flatMap(i -> learnerRepository.findMatchingWord(username, i)).orElseThrow();
+        DbLearnerItem item = id.flatMap(i -> learnerCustomRepository.findMatchingWord(username, i)).orElseThrow();
         Result result = getResult(answer, strings);
         if (result.isPass()) {
             item.setSuccessfulAnswers(item.getSuccessfulAnswers() + 1);
