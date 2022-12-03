@@ -2,20 +2,19 @@
 
 ## Indonesian english dictionary/learning tool
 
-This microservice currently does 4 things:
+This microservice currently does 3 things using an internal dictionary:
 
 1) It can return any matching words in the opposite language if english or indonesian words are given for it.
-2) It can return the complete dictionary of words.
-3) Users can add new words to the dictionary.
-4) Users can test themselves using words from the dictionary.
+2) Users can add new words to the dictionary.
+3) Users can test themselves using words from the dictionary.
 
 It requires the user to first login and use basic auth. Passwords are hashed and stored in the database. Username and
 password will be required to call any of the endpoints other than registration.
 
 The majority of the endpoints need the 'accept language' header to be populated with the user's language. If there was a
 front end for this microservice this would be done there. If the user selects english then the endpoints will be english
-focused (e.g. the dictionary will be organised with english words first and indonesian translations after and sorted
-alphabetically).
+focused (e.g. if their 'accept-language' header was _en_ they would be expected to give an english word to the lookup
+endpoint).
 
 The two languages don't have to be english and indonesian. If you change the application properties to two other
 languages you can populate your own database with words in that language. However currently this application only
@@ -37,31 +36,6 @@ This is a post endpoint which takes this :
         "password": <password>
     }
 
-### Dictionary
-
-    /dictionary
-
-This get endpoint allows you to get the dictionary. If your 'accept-language' header is set to _en_ then it will return
-the english words with their associated translations, ordered alphabetically. Note that there may be more than one
-translation for each word. If your 'accept-language' header is set to _id_ it will return the words indonesian first
-ordered alphabetically with the associated english translations.
-
-Expect to get a response something like this:
-
-    [
-    {
-        "word": "a",
-        "wordDefinitions": [
-            "sebuah",
-            "seekor"
-        ]
-    },
-    {
-        "word": "able",
-        "wordDefinitions": [
-            "mampu"
-        ]
-    }...
 
 ### Lookup
 
