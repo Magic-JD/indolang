@@ -14,7 +14,7 @@ public class LanguageValidator {
     private Set<String> supportedLanguages;
 
     public void validateLanguage(String language) {
-        if (StringUtils.hasText(language)) {
+        if (!StringUtils.hasText(language)) {
             throw new Exceptions.LanguageNotProvidedException();
         }
         if (!supportedLanguages.contains(language)) {
