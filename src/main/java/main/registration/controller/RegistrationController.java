@@ -29,6 +29,5 @@ public class RegistrationController {
         } else {
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
-
     }
 }
