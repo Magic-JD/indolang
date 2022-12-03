@@ -29,7 +29,7 @@ public class QuestionVerifier {
                 .orElseThrow(Exceptions.TranslationsNotFoundException::new);
         var learnerItem = translationItem
                 .map(mapper::toId)
-                .flatMap(i -> learnerCustomRepository.findMatchingWord(username, i))
+                .flatMap(id -> learnerCustomRepository.findMatchingWord(username, id))
                 .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
         var result = getResult(answer, translations);
         if (result.isPass()) {
