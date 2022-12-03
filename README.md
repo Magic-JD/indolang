@@ -67,9 +67,9 @@ The response will be in this form:
     }
 
 If the user has words they are already being tested on then a word from that database is given to the user. If the user
-has not or they have been too recently tested on these words then a new word is taken from the word database. The
+has not, or they have been too recently tested on these words then a new word is taken from the word database. The
 current question will be re-shown to the user after 5 minutes if they get it wrong, and after four hours if they get it
-right once, increasing exponentially for each subsequent right answer. If they get a question wrong it resets and they
+right once, increasing exponentially for each subsequent right answer. If they get a question wrong it resets, and they
 will have to answer it again after 5 minutes.
 
     /answer
@@ -106,6 +106,39 @@ This endpoint is a post that lets you add a new word to the database. It takes a
 
 This will either create a new entry in the database with the word and the translation, or if the word is already in the
 database it will add the translation to the list of translations.
+
+## Database
+
+There are three tables that are used for this project, using a mongodb database.
+
+### Users
+
+| _id      | username | password        | enabled | roles |
+|----------|----------|-----------------|---------|-------|
+| ObjectId | String   | String (hashed) | boolean | Array |
+
+This table is used to store information about the user such as what roles they have in order to allow or deny them
+access to certain endpoints.
+
+### word_translations
+
+| _id      | locale                               | keyWord | translations     |
+|----------|--------------------------------------|---------|------------------|
+| ObjectId | String<br/> The language of the word | String  | Array of Strings |
+
+This table holds the information about the individual words. It is indexed on the keyWord, as it is usually queried on
+the word directly and there are unlikely to be duplicates in another language.
+
+### learner
+
+| _id      | wordTranslations | username | date             | successfulAnswers |
+|----------|------------------|----------|------------------|-------------------|
+| ObjectId | ObjectId         | String   | Array of Strings | int               |
+
+This table hold the information about the learner and the questions that they have already answered. The
+wordTranslations are stored as a document reference, so they can be quickly retrieved from the object. The data is
+indexed using the username, as each user would likely have a small grouping of answers, making this the ideal key to
+reduce on lookup time.
 
 ## Notes:
 
