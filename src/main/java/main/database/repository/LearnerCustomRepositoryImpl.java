@@ -17,7 +17,6 @@ public class LearnerCustomRepositoryImpl implements LearnerCustomRepository {
 
     @Autowired MongoTemplate mongoTemplate;
 
-    //TODO indexing
     public Optional<DbLearnerItem> findMatchingWord(final String username, final ObjectId wordTranslationId) {
         var query = new Query(Criteria.where("username").is(username))
                 .addCriteria(Criteria.where("wordTranslation").is(wordTranslationId));
