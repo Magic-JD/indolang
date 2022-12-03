@@ -2,8 +2,8 @@ package main.rest.lookup.controller;
 
 import main.exception.Exceptions;
 import main.rest.lookup.Lookup;
-import main.rest.lookup.data.Definitions;
-import main.rest.lookup.data.Word;
+import main.rest.model.Definitions;
+import main.rest.model.Word;
 import main.validation.LanguageValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

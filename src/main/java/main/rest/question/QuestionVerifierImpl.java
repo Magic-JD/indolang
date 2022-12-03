@@ -7,8 +7,8 @@ import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
 import main.exception.Exceptions;
-import main.rest.question.data.Answer;
-import main.rest.question.data.Result;
+import main.rest.model.Answer;
+import main.rest.model.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

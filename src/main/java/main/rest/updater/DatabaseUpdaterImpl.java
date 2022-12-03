@@ -2,7 +2,7 @@ package main.rest.updater;
 
 import main.database.model.DbWordTranslationsItem;
 import main.database.repository.WordTranslationsRepository;
-import main.rest.updater.data.Definition;
+import main.rest.model.Definition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

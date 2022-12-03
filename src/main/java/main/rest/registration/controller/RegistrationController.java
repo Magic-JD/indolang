@@ -2,7 +2,7 @@ package main.rest.registration.controller;
 
 import main.database.model.DbUserDetails;
 import main.database.repository.UserRepository;
-import main.rest.registration.data.UserCredentialsDto;
+import main.rest.model.UserCredentialsDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

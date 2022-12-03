@@ -1,11 +1,11 @@
 package main.rest.question.controller;
 
 import main.exception.Exceptions;
-import main.rest.lookup.data.Word;
+import main.rest.model.Answer;
+import main.rest.model.Result;
+import main.rest.model.Word;
 import main.rest.question.QuestionRetriever;
 import main.rest.question.QuestionVerifier;
-import main.rest.question.data.Answer;
-import main.rest.question.data.Result;
 import main.validation.LanguageValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

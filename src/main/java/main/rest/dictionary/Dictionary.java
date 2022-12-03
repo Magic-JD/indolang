@@ -1,6 +1,6 @@
 package main.rest.dictionary;
 
-import main.rest.lookup.data.Definitions;
+import main.rest.model.Definitions;
 
 import java.util.List;
 

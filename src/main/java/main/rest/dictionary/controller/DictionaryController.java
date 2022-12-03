@@ -2,7 +2,7 @@ package main.rest.dictionary.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import main.rest.dictionary.Dictionary;
-import main.rest.lookup.data.Definitions;
+import main.rest.model.Definitions;
 import main.validation.LanguageValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

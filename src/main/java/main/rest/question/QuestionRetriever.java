@@ -1,6 +1,6 @@
 package main.rest.question;
 
-import main.rest.lookup.data.Word;
+import main.rest.model.Word;
 
 import java.util.Optional;
 

@@ -1,7 +1,7 @@
 package main.rest.question;
 
-import main.rest.question.data.Answer;
-import main.rest.question.data.Result;
+import main.rest.model.Answer;
+import main.rest.model.Result;
 
 public interface QuestionVerifier {
     Result verifyTest(String username, Answer answer, String language);

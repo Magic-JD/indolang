@@ -6,7 +6,7 @@ import main.database.model.DbLearnerItem;
 import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.LearnerWordRepository;
-import main.rest.lookup.data.Word;
+import main.rest.model.Word;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

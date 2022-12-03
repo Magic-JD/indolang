@@ -1,4 +1,4 @@
-package main.rest.registration.data;
+package main.rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

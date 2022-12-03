@@ -1,4 +1,4 @@
-package main.rest.updater.data;
+package main.rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

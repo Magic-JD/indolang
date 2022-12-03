@@ -1,7 +1,7 @@
 package main.rest.lookup;
 
-import main.rest.lookup.data.Definitions;
-import main.rest.lookup.data.Word;
+import main.rest.model.Definitions;
+import main.rest.model.Word;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package main.rest.question.data;
+package main.rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

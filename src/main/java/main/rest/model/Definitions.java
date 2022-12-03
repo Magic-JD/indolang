@@ -1,4 +1,4 @@
-package main.rest.lookup.data;
+package main.rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

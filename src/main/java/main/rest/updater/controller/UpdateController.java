@@ -1,7 +1,7 @@
 package main.rest.updater.controller;
 
+import main.rest.model.Definition;
 import main.rest.updater.DatabaseUpdater;
-import main.rest.updater.data.Definition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
