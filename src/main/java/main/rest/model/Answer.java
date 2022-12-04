@@ -6,6 +6,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class Answer {
-    String askedQuestion;
-    String answer;
+    private String askedQuestion;
+    private String answer;
 }

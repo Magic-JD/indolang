@@ -16,11 +16,11 @@ import java.util.Optional;
 @Component
 public class QuestionRetrieverImpl implements QuestionRetriever {
 
-    @Autowired LearnerRepository learnerRepository;
-    @Autowired LearnerCustomRepository learnerCustomRepository;
-    @Autowired LearnerMapper learnerMapper;
-    @Autowired LearnerWordRepository learnerWordRepository;
-    @Autowired WordTranslationsMapper wordTranslationsMapper;
+    @Autowired private LearnerRepository learnerRepository;
+    @Autowired private LearnerCustomRepository learnerCustomRepository;
+    @Autowired private LearnerMapper learnerMapper;
+    @Autowired private LearnerWordRepository learnerWordRepository;
+    @Autowired private WordTranslationsMapper wordTranslationsMapper;
 
     @Override
     public Optional<Word> getWord(String username, String language) {

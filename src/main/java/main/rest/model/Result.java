@@ -8,8 +8,8 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 public class Result {
-    boolean pass;
-    String word;
-    String submittedTranslation;
-    Set<String> translations;
+    private boolean pass;
+    private String word;
+    private String submittedTranslation;
+    private Set<String> translations;
 }

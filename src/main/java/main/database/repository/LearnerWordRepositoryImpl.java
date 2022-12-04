@@ -12,8 +12,8 @@ import java.util.Optional;
 @Component
 public class LearnerWordRepositoryImpl implements LearnerWordRepository {
 
-    @Autowired LearnerRepository learnerRepository;
-    @Autowired MongoTemplate mongoTemplate;
+    @Autowired private LearnerRepository learnerRepository;
+    @Autowired private MongoTemplate mongoTemplate;
 
     @Override
     public Optional<DbWordTranslationsItem> findNewQuestion(String username, String language) {

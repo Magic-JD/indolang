@@ -20,8 +20,7 @@ import java.util.Set;
 @Component
 public class QuestionVerifierImpl implements QuestionVerifier {
 
-    @Autowired
-    private WordTranslationsRepository wordTranslationsRepository;
+    @Autowired private WordTranslationsRepository wordTranslationsRepository;
     @Autowired private WordTranslationsMapper mapper;
     @Autowired private LearnerRepository learnerRepository;
     @Autowired private LearnerCustomRepository learnerCustomRepository;

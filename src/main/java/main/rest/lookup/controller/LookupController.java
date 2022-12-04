@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/lookup")
 public class LookupController {
 
-    @Autowired Lookup lookup;
-    @Autowired LanguageValidator languageValidator;
+    @Autowired private Lookup lookup;
+    @Autowired private LanguageValidator languageValidator;
 
     @GetMapping("/{word}")
     @ResponseBody

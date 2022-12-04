@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UpdateController {
 
-    @Autowired DatabaseUpdater databaseUpdater;
-    @Autowired LanguageValidator languageValidator;
+    @Autowired private DatabaseUpdater databaseUpdater;
+    @Autowired private LanguageValidator languageValidator;
 
     @PostMapping("/update/create")
     @ResponseStatus(HttpStatus.CREATED)

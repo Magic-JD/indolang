@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabaseUpdaterImpl implements DatabaseUpdater {
 
-    @Autowired WordTranslationsRepository repository;
+    @Autowired private WordTranslationsRepository repository;
 
     @Override
     public void updateDatabase(Definition definition, String language) {

@@ -15,7 +15,7 @@ import java.util.Optional;
 @Component
 public class LearnerCustomRepositoryImpl implements LearnerCustomRepository {
 
-    @Autowired MongoTemplate mongoTemplate;
+    @Autowired private MongoTemplate mongoTemplate;
 
     public Optional<DbLearnerItem> findMatchingWord(final String username, final ObjectId wordTranslationId) {
         var query = new Query(Criteria.where("username").is(username))

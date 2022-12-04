@@ -12,8 +12,8 @@ import java.util.Optional;
 @Component
 public class LookupImpl implements Lookup {
 
-    @Autowired WordTranslationsRepository repository;
-    @Autowired WordTranslationsMapper mapper;
+    @Autowired private WordTranslationsRepository repository;
+    @Autowired private WordTranslationsMapper mapper;
 
     @Override
     public Optional<Definitions> lookupWord(String location, Word Word) {
