@@ -23,7 +23,7 @@ public class ExceptionHandlers {
 
     @ExceptionHandler(Exceptions.WordNotFoundException.class)
     public ResponseEntity<Object> exception(Exceptions.WordNotFoundException exception) {
-        return new ResponseEntity<>(WORD_COULD_NOT_BE_FOUND, HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @ExceptionHandler(Exceptions.AllWordsLearnedException.class)
@@ -33,7 +33,7 @@ public class ExceptionHandlers {
 
     @ExceptionHandler(Exceptions.TranslationsNotFoundException.class)
     public ResponseEntity<Object> exception(Exceptions.TranslationsNotFoundException exception) {
-        return new ResponseEntity<>(NO_TRANSLATIONS_FOUND, HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @ExceptionHandler(Exceptions.WordNotLearnedException.class)
