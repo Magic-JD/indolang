@@ -37,6 +37,6 @@ public class QuestionController {
              @RequestBody Answer answer) {
         languageValidator.validateLanguage(language);
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        return ResponseEntity.ok(questionVerifier.verifyTest(username, answer, language));
+        return ResponseEntity.ok(questionVerifier.verifyTest(username, language, answer));
     }
 }

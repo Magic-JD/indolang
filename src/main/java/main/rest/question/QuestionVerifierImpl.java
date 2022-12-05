@@ -26,7 +26,7 @@ public class QuestionVerifierImpl implements QuestionVerifier {
     @Autowired private LearnerCustomRepository learnerCustomRepository;
 
     @Override
-    public Result verifyTest(String username, Answer answer, String language) {
+    public Result verifyTest(String username, String language, Answer answer) {
         var translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
         var translations = getTranslationsSet(translationItem);
         var learnerItem = retrieveLearnerItem(username, translationItem);
