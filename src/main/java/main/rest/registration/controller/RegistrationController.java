@@ -22,7 +22,7 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public ResponseEntity register(@RequestBody UserCredentialsDto userCredentialsDto) {
-        if (userRepository.findItemByName(userCredentialsDto.getUsername()) == null) {
+        if (userRepository.findItemByName(userCredentialsDto.getUsername()).isEmpty()) {
             var user = new DbUserItem(userCredentialsDto.getUsername(), passwordEncoder.encode(userCredentialsDto.getPassword()), true, Set.of("USER"));
             userRepository.save(user);
             return ResponseEntity.status(HttpStatus.CREATED).build();
