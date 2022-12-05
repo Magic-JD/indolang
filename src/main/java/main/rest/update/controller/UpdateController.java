@@ -1,7 +1,7 @@
-package main.rest.updater.controller;
+package main.rest.update.controller;
 
 import main.rest.model.Definition;
-import main.rest.updater.DatabaseUpdater;
+import main.rest.update.DatabaseUpdater;
 import main.validation.LanguageValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

@@ -1,4 +1,4 @@
-package main.rest.updater;
+package main.rest.update;
 
 import main.rest.model.Definition;
 

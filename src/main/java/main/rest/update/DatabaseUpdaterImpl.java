@@ -1,4 +1,4 @@
-package main.rest.updater;
+package main.rest.update;
 
 import main.database.model.DbWordTranslationsItem;
 import main.database.repository.WordTranslationsRepository;
