@@ -22,7 +22,7 @@ public class UpdateController {
     }
 
     @PostMapping("/update/delete")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public void removeWordFromDictionary(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @RequestBody Definition definition) {
         languageValidator.validateLanguage(language);
         databaseUpdater.removeFromDatabase(language, definition);
