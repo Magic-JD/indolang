@@ -17,6 +17,6 @@ public class LookupImpl implements Lookup {
 
     @Override
     public Optional<Definitions> lookupWord(String location, Word Word) {
-        return repository.findTranslationsFor(Word.getWord(), location).map(mapper::toDefinitions);
+        return repository.findTranslationsFor(location, Word.getWord()).map(mapper::toDefinitions);
     }
 }

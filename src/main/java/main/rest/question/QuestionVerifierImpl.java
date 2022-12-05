@@ -27,7 +27,7 @@ public class QuestionVerifierImpl implements QuestionVerifier {
 
     @Override
     public Result verifyTest(String username, String language, Answer answer) {
-        var translationItem = wordTranslationsRepository.findTranslationsFor(answer.getAskedQuestion(), language);
+        var translationItem = wordTranslationsRepository.findTranslationsFor(language, answer.getAskedQuestion());
         var translations = getTranslationsSet(translationItem);
         var learnerItem = retrieveLearnerItem(username, translationItem);
         var result = getResult(answer, translations);

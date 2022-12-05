@@ -16,17 +16,15 @@ public class UpdateController {
 
     @PostMapping("/update/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addWordToDictionary(@RequestBody Definition definition,
-                                    @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+    public void addWordToDictionary(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @RequestBody Definition definition) {
         languageValidator.validateLanguage(language);
-        databaseUpdater.updateDatabase(definition, language);
+        databaseUpdater.updateDatabase(language, definition);
     }
 
     @PostMapping("/update/delete")
     @ResponseStatus(HttpStatus.CREATED)
-    public void removeWordFromDictionary(@RequestBody Definition definition,
-                                         @RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
+    public void removeWordFromDictionary(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @RequestBody Definition definition) {
         languageValidator.validateLanguage(language);
-        databaseUpdater.removeFromDatabase(definition, language);
+        databaseUpdater.removeFromDatabase(language, definition);
     }
 }

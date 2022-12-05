@@ -12,16 +12,16 @@ public class DatabaseUpdaterImpl implements DatabaseUpdater {
     @Autowired private WordTranslationsRepository repository;
 
     @Override
-    public void updateDatabase(Definition definition, String language) {
-        var item = repository.findByKeyword(definition.getWord(), language)
+    public void updateDatabase(String language, Definition definition) {
+        var item = repository.findByKeyword(language, definition.getWord())
                 .orElse(new DbWordTranslationsItem(language, definition.getWord()));
         item.addToTranslations(definition.getTranslation());
         repository.save(item);
     }
 
     @Override
-    public void removeFromDatabase(Definition definition, String language) {
-        repository.findByKeyword(definition.getWord(), language).ifPresent(item -> updateOrDelete(item, definition));
+    public void removeFromDatabase(String language, Definition definition) {
+        repository.findByKeyword(language, definition.getWord()).ifPresent(item -> updateOrDelete(item, definition));
     }
 
     private void updateOrDelete(DbWordTranslationsItem item, Definition definition) {
