@@ -33,8 +33,8 @@ public class ExceptionHandlers {
         return new ResponseEntity<>("Translations for the given question word could not be found.", HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    @ExceptionHandler(Exceptions.UserHasNotLearnedWordException.class)
-    public ResponseEntity<Object> exception(Exceptions.UserHasNotLearnedWordException exception) {
+    @ExceptionHandler(Exceptions.WordNotLearnedException.class)
+    public ResponseEntity<Object> exception(Exceptions.WordNotLearnedException exception) {
         return new ResponseEntity<>("The user has not yet learned this word, or it has been removed from the database.", HttpStatus.UNPROCESSABLE_ENTITY);
     }
 }

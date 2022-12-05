@@ -16,6 +16,6 @@ public class Exceptions {
     public static class TranslationsNotFoundException extends RuntimeException {
     }
 
-    public static class UserHasNotLearnedWordException extends RuntimeException {
+    public static class WordNotLearnedException extends RuntimeException {
     }
 }

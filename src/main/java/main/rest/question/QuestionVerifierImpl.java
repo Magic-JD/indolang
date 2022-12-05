@@ -47,7 +47,7 @@ public class QuestionVerifierImpl implements QuestionVerifier {
         return translationItem
                 .map(mapper::toId)
                 .flatMap(id -> learnerCustomRepository.findMatchingWord(username, id))
-                .orElseThrow(Exceptions.UserHasNotLearnedWordException::new);
+                .orElseThrow(Exceptions.WordNotLearnedException::new);
     }
 
     private Result getResult(Answer answer, Set<String> strings) {
