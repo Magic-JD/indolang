@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class LearnerWordRepositoryImpl implements LearnerWordRepository {
@@ -17,8 +18,13 @@ public class LearnerWordRepositoryImpl implements LearnerWordRepository {
 
     @Override
     public Optional<DbWordTranslationsItem> findNewQuestion(String username, String language) {
-        var objectIdStream = learnerRepository.findAllForLearner(username).stream().map(dbl -> dbl.getWordTranslation().get_id());
-        var query = new Query(Criteria.where("locale").is(language).and("_id").nin(objectIdStream));
+        var objectIds = learnerRepository.findAllForLearner(username).stream()
+                .map(dbl -> dbl.getWordTranslation().get_id())
+                .collect(Collectors.toList());
+        var query = new Query(Criteria.where("locale").is(language));
+        if (!objectIds.isEmpty()) {
+            query.addCriteria(Criteria.where("_id").nin(objectIds));
+        }
         return Optional.ofNullable(mongoTemplate.findOne(query, DbWordTranslationsItem.class));
     }
 }
