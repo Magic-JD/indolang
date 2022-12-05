@@ -1,6 +1,6 @@
 package main.config;
 
-import main.rest.registration.service.DatabaseUserDetailsService;
+import main.rest.registration.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Autowired
-    private DatabaseUserDetailsService databaseUserDetailsService;
+    private UserDetailsServiceImpl userDetailsServiceImpl;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -41,7 +41,7 @@ public class SecurityConfig {
     public AuthenticationProvider daoAuthenticationProvider() {
         var provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder());
-        provider.setUserDetailsService(this.databaseUserDetailsService);
+        provider.setUserDetailsService(this.userDetailsServiceImpl);
         return provider;
     }
 
