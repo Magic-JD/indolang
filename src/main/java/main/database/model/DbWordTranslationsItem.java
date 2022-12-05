@@ -27,10 +27,14 @@ public class DbWordTranslationsItem {
     }
 
     public void addToTranslations(String translation) {
-        this.translations.add(translation);
+        translations.add(translation);
     }
 
     public void removeFromTranslations(String translation) {
-        this.translations.remove(translation);
+        translations.remove(translation);
+    }
+
+    public boolean containsTranslation(String translation) {
+        return translations.contains(translation);
     }
 }

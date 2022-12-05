@@ -37,4 +37,9 @@ public class ExceptionHandlers {
     public ResponseEntity<Object> exception(Exceptions.WordNotLearnedException exception) {
         return new ResponseEntity<>("The user has not yet learned this word, or it has been removed from the database.", HttpStatus.UNPROCESSABLE_ENTITY);
     }
+
+    @ExceptionHandler(Exceptions.WordDoesNotExistToBeRemoved.class)
+    public ResponseEntity<Object> exception(Exceptions.WordDoesNotExistToBeRemoved exception) {
+        return new ResponseEntity<>("The word you want to remove does not exist", HttpStatus.UNPROCESSABLE_ENTITY);
+    }
 }

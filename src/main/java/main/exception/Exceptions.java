@@ -18,4 +18,8 @@ public class Exceptions {
 
     public static class WordNotLearnedException extends RuntimeException {
     }
+
+    public static class WordDoesNotExistToBeRemoved extends RuntimeException {
+
+    }
 }
