@@ -3,17 +3,15 @@ package main.rest.question.controller;
 import main.Application;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
+import main.rest.RestControllerTest;
 import main.rest.model.Answer;
 import main.rest.model.UserCredentialsDto;
 import main.rest.registration.controller.RegistrationController;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -26,22 +24,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class QuestionControllerTest {
+class QuestionControllerTest extends RestControllerTest {
 
     public static final String QUESTION_RESPONSE = "{\"word\":\"WORD_1\"}";
     public static final String PASSING_RESPONSE = "{\"pass\":true,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_1\",\"translations\":[]}";
     public static final String FAILING_RESPONSE = "{\"pass\":false,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_3\",\"translations\":[\"TRANSLATION_1\"]}";
-    @LocalServerPort private int port;
+
     public static final String URI_QUESTION = "/question";
     public static final String URI_ANSWER = "/answer";
 
-    TestRestTemplate restTemplate = new TestRestTemplate();
     @Autowired WordTranslationsRepository wordRepository;
     @Autowired RegistrationController controller;
     @Autowired LearnerRepository learnerRepository;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
+        super.setUp();
         controller.register(new UserCredentialsDto(USERNAME_1, PASSWORD));
     }
 
@@ -210,16 +208,5 @@ class QuestionControllerTest {
                         createURLWithPort(URI_ANSWER),
                         HttpMethod.POST, entity, String.class);
         assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
-    }
-
-
-    private String createURLWithPort(String uri) {
-        return "http://localhost:" + port + uri;
-    }
-
-    @AfterEach
-    void tearDown() {
-        wordRepository.deleteAll();
-        learnerRepository.deleteAll();
     }
 }

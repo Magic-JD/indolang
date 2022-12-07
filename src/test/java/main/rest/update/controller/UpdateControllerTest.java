@@ -1,26 +1,15 @@
 package main.rest.update.controller;
 
-import main.Application;
-import main.database.model.DbUserItem;
 import main.database.model.DbWordTranslationsItem;
-import main.database.repository.UserRepository;
 import main.database.repository.WordTranslationsRepository;
+import main.rest.RestControllerTest;
 import main.rest.model.Definition;
-import main.rest.model.UserCredentialsDto;
-import main.rest.registration.controller.RegistrationController;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 
@@ -29,26 +18,12 @@ import static main.exception.constants.ExceptionConstants.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class UpdateControllerTest {
+class UpdateControllerTest extends RestControllerTest {
 
-    public static final String HASH = "$2a$10$.lHmsVVawmHMCOtVk5RMiOzmVJCUk9PVfYSh5urKRZ3G7TwCmwxKG";
-    @LocalServerPort private int port;
     public static final String URI_CREATE = "/update/create";
     public static final String URI_DELETE = "/update/delete";
 
-    TestRestTemplate restTemplate = new TestRestTemplate();
     @Autowired WordTranslationsRepository wordRepository;
-    @Autowired RegistrationController controller;
-    @Autowired UserRepository userRepository;
-
-    @BeforeEach
-    void setUp() {
-        userRepository.deleteAll();
-        controller.register(new UserCredentialsDto(USERNAME_1, PASSWORD));
-        userRepository.save(new DbUserItem(USERNAME_2, HASH, true, ROLES_SET_2));
-    }
 
     @Test
     void testCreateReturns401UnauthorisedIfTheUserIsNotAuthorisedAtAll() {
@@ -209,15 +184,5 @@ class UpdateControllerTest {
         assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
         List<DbWordTranslationsItem> words = wordRepository.findAll();
         assertTrue(words.isEmpty());
-    }
-
-
-    private String createURLWithPort(String uri) {
-        return "http://localhost:" + port + uri;
-    }
-
-    @AfterEach
-    void tearDown() {
-        wordRepository.deleteAll();
     }
 }
