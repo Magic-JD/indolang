@@ -54,6 +54,16 @@ class QuestionControllerTest extends RestControllerTest {
     }
 
     @Test
+    void testQuestionReturns401UnauthorisedIfTheUserIsNotUsingTheCorrectPassword() {
+        HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
+        ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, INCORRECT_PASSWORD)
+                .exchange(
+                        createURLWithPort(URI_QUESTION),
+                        HttpMethod.GET, entity, String.class);
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+    }
+
+    @Test
     void testQuestionReturns400IfLanguageHeaderNotIncluded() {
         HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
         ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, PASSWORD)
@@ -116,6 +126,16 @@ class QuestionControllerTest extends RestControllerTest {
         ResponseEntity<String> response = restTemplate.exchange(
                 createURLWithPort(URI_ANSWER),
                 HttpMethod.POST, entity, String.class);
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+    }
+
+    @Test
+    void testAnswerReturns401UnauthorisedIfTheUserIsNotUsingTheCorrectPassword() {
+        HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
+        ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, INCORRECT_PASSWORD)
+                .exchange(
+                        createURLWithPort(URI_ANSWER),
+                        HttpMethod.GET, entity, String.class);
         assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
     }
 

@@ -33,7 +33,6 @@ public class TestConstants {
     public static final String WORD_2 = "WORD_2";
     public static final String WORD_3 = "WORD_3";
     public static final Word WORD_OBJECT_1 = new Word(WORD_1);
-    public static final Word WORD_OBJECT_2 = new Word(WORD_2);
     public static final String TRANSLATION_1 = "TRANSLATION_1";
     public static final String TRANSLATION_2 = "TRANSLATION_2";
     public static final String TRANSLATION_3 = "TRANSLATION_3";
@@ -80,6 +79,7 @@ public class TestConstants {
     public static Answer CORRECT_ANSWER = new Answer(WORD_1, TRANSLATION_1);
     public static Answer FALSE_ANSWER = new Answer(WORD_1, TRANSLATION_3);
     public static final String PASSWORD = "PASSWORD";
+    public static final String INCORRECT_PASSWORD = "INCORRECT_PASSWORD";
     public static DbUserItem DB_USER_ITEM = new DbUserItem(USERNAME_1, PASSWORD, true, ROLES_SET_1);
     public static final Definition DEFINITION_1 = new Definition(WORD_1, TRANSLATION_1);
     public static final Definition DEFINITION_2 = new Definition(WORD_1, TRANSLATION_2);

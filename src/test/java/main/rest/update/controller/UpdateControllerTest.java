@@ -35,12 +35,21 @@ class UpdateControllerTest extends RestControllerTest {
     }
 
     @Test
-    void testCreateReturns403UnauthorisedIfTheUserIsOnlyPartiallyAuthorised() {
+    void testCreateReturns403ForbiddenIfTheUserIsOnlyPartiallyAuthorised() {
         HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
         ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, PASSWORD).exchange(
                 createURLWithPort(URI_CREATE),
                 HttpMethod.POST, entity, String.class);
         assertEquals(HttpStatus.FORBIDDEN, response.getStatusCode());
+    }
+
+    @Test
+    void testCreateReturns401UnauthorisedIfTheUserIsFullyAuthorisedButUsingTheWrongPassword() {
+        HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
+        ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_2, INCORRECT_PASSWORD).exchange(
+                createURLWithPort(URI_CREATE),
+                HttpMethod.POST, entity, String.class);
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
     }
 
     @Test

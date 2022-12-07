@@ -31,6 +31,16 @@ class LookupControllerTest extends RestControllerTest {
     }
 
     @Test
+    void testLookupReturns401UnauthorisedIfTheUserIsNotUsingTheCorrectPassword() {
+        HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
+        ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, INCORRECT_PASSWORD)
+                .exchange(
+                        createURLWithPort(URI),
+                        HttpMethod.GET, entity, String.class);
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+    }
+
+    @Test
     void testLookupReturns400IfLanguageHeaderNotIncluded() {
         HttpEntity<String> entity = new HttpEntity<>(null, HEADERS_WO_LANG);
         ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, PASSWORD)
@@ -75,13 +85,13 @@ class LookupControllerTest extends RestControllerTest {
 
     @Test
     void testLookupReturns200WithTheCorrectWordIfTheWordCanBeFound() {
-        repository.save(DB_WORD_TRANSLATION_ITEM_1);
+        repository.save(DB_WORD_TRANSLATION_ITEM_1_SMALL);
         HttpEntity<String> entity = new HttpEntity<>(null, CORRECT_HEADERS);
         ResponseEntity<String> response = restTemplate.withBasicAuth(USERNAME_1, PASSWORD)
                 .exchange(
                         createURLWithPort(URI),
                         HttpMethod.GET, entity, String.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("{\"word\":\"WORD_1\",\"wordDefinitions\":[\"TRANSLATION_2\",\"TRANSLATION_1\"]}", response.getBody());
+        assertEquals("{\"word\":\"WORD_1\",\"wordDefinitions\":[\"TRANSLATION_1\"]}", response.getBody());
     }
 }
