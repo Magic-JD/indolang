@@ -3,12 +3,13 @@ package main.database.repository;
 import main.database.model.DbWordTranslationsItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
+import static org.springframework.data.mongodb.core.query.Criteria.where;
 
 @Component
 public class LearnerWordRepositoryImpl implements LearnerWordRepository {
@@ -18,12 +19,12 @@ public class LearnerWordRepositoryImpl implements LearnerWordRepository {
 
     @Override
     public Optional<DbWordTranslationsItem> findNewQuestion(String username, String language) {
-        var objectIds = learnerRepository.findAllForLearner(username).stream()
-                .map(dbl -> dbl.getWordTranslation().get_id())
-                .collect(Collectors.toList());
-        var query = new Query(Criteria.where("locale").is(language));
-        if (!objectIds.isEmpty()) {
-            query.addCriteria(Criteria.where("_id").nin(objectIds));
+        var alreadyLearntWordIds = learnerRepository.findAllForLearner(username).stream()
+                .map(learnerItem -> learnerItem.getWordTranslation().get_id())
+                .collect(toList());
+        var query = new Query(where("locale").is(language));
+        if (!alreadyLearntWordIds.isEmpty()) {
+            query.addCriteria(where("_id").nin(alreadyLearntWordIds));
         }
         return Optional.ofNullable(mongoTemplate.findOne(query, DbWordTranslationsItem.class));
     }

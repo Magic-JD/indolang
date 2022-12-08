@@ -2,3 +2,4 @@ spring.data.mongodb.uri=mongodb+srv://<username>:<pwd>@<cluster>.mongodb.net/ind
 spring.data.mongodb.database=indolang
 
 supported_languages=en,id
+registration_roles=USER

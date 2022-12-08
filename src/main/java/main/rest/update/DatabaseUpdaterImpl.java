@@ -22,10 +22,10 @@ public class DatabaseUpdaterImpl implements DatabaseUpdater {
 
     @Override
     public void removeFromDatabase(String language, Definition definition) {
-        DbWordTranslationsItem item = repository.findByKeyword(language, definition.getWord())
-                .filter(i -> i.containsTranslation(definition.getTranslation()))
+        DbWordTranslationsItem wordTranslationsItem = repository.findByKeyword(language, definition.getWord())
+                .filter(item -> item.containsTranslation(definition.getTranslation()))
                 .orElseThrow(Exceptions.WordDoesNotExistToBeRemoved::new);
-        updateOrDelete(item, definition.getTranslation());
+        updateOrDelete(wordTranslationsItem, definition.getTranslation());
     }
 
     private void updateOrDelete(DbWordTranslationsItem item, String translation) {

@@ -31,7 +31,7 @@ public class DbLearnerItem {
         this.date = date;
     }
 
-    public void updateSuccessfulAnswers(boolean increase) {
+    public void increaseOrResetSuccessfulAnswers(boolean increase) {
         if (increase) {
             successfulAnswers++;
         } else {

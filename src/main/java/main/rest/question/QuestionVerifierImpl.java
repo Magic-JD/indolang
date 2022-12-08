@@ -31,7 +31,7 @@ public class QuestionVerifierImpl implements QuestionVerifier {
         var translations = getTranslationsSet(translationItem);
         var learnerItem = retrieveLearnerItem(username, translationItem);
         var result = getResult(answer, translations);
-        learnerItem.updateSuccessfulAnswers(result.isPass());
+        learnerItem.increaseOrResetSuccessfulAnswers(result.isPass());
         learnerItem.setDate(calculateDate(learnerItem.getSuccessfulAnswers()));
         learnerRepository.save(learnerItem);
         return result;
@@ -50,11 +50,11 @@ public class QuestionVerifierImpl implements QuestionVerifier {
                 .orElseThrow(Exceptions.WordNotLearnedException::new);
     }
 
-    private Result getResult(Answer answer, Set<String> strings) {
-        return strings.stream()
+    private Result getResult(Answer answer, Set<String> correctTranslation) {
+        return correctTranslation.stream()
                 .filter(t -> t.equals(answer.getAnswer()))
                 .findAny().map(s -> new Result(true, answer.getAskedQuestion(), answer.getAnswer(), new HashSet<>()))
-                .orElse(new Result(false, answer.getAskedQuestion(), answer.getAnswer(), strings));
+                .orElse(new Result(false, answer.getAskedQuestion(), answer.getAnswer(), correctTranslation));
     }
 
     private ZonedDateTime calculateDate(int noOfSuccessfulAnswers) {

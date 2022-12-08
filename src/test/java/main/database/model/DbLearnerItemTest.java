@@ -13,9 +13,9 @@ class DbLearnerItemTest {
     @Test
     void testUpdatingSuccessfulAnswersCorrectlyUpdatesTheNumber() {
         assertEquals(NUMBER, SUT.getSuccessfulAnswers());
-        SUT.updateSuccessfulAnswers(true);
+        SUT.increaseOrResetSuccessfulAnswers(true);
         assertEquals(NUMBER + 1, SUT.getSuccessfulAnswers());
-        SUT.updateSuccessfulAnswers(false);
+        SUT.increaseOrResetSuccessfulAnswers(false);
         assertEquals(ZERO, SUT.getSuccessfulAnswers());
     }
 }
