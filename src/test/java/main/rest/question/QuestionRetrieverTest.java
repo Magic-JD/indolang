@@ -1,8 +1,10 @@
 package main.rest.question;
 
 import main.database.model.DbLearnerItem;
+import main.database.model.DbWordTranslationsItem;
 import main.database.repository.LearnerRepository;
 import main.database.repository.WordTranslationsRepository;
+import main.exception.Exceptions;
 import main.rest.model.Word;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,11 +15,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-import java.util.Optional;
 
 import static main.TestConstants.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -35,23 +35,20 @@ class QuestionRetrieverTest {
 
 
     @Test
-    void testLookupReturnsEmptyOptionalIfThereIsNothingAppropriateInEitherDatabase() {
-        assertTrue(true);
-        assertTrue(SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1).isEmpty());
+    void testLookupThrowsExceptionIfThereIsNothingAppropriateInEitherDatabase() {
+        assertThrows(Exceptions.AllWordsLearnedException.class, () -> SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1));
     }
 
     @Test
-    void testLookupReturnsEmptyIfThereIsNothingAvailableInTheLearnerRepoAndNothingInTheWordRepoInTheRightLanguage() {
+    void testLookupThrowsExceptionIfThereIsNothingAvailableInTheLearnerRepoAndNothingInTheWordRepoInTheRightLanguage() {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_1);
-        assertTrue(SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_2).isEmpty());
+        assertThrows(Exceptions.AllWordsLearnedException.class, () -> SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_2));
     }
 
     @Test
     void testLookupReturnsANewWordFromTheWordTranslationRepositoryIfThereIsNothingAvailableInTheLearnerRepo() {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_1);
-        Optional<Word> optional = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
-        assertTrue(optional.isPresent());
-        Word word = optional.get();
+        Word word = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
         assertEquals(WORD_1, word.getWord());
     }
 
@@ -65,7 +62,11 @@ class QuestionRetrieverTest {
         DbLearnerItem dbLearnerItem = learnerItems.get(0);
         assertEquals(USERNAME_1, dbLearnerItem.getUsername());
         assertEquals(0, dbLearnerItem.getSuccessfulAnswers());
-        assertEquals(DB_WORD_TRANSLATION_ITEM_1, dbLearnerItem.getWordTranslation());
+        DbWordTranslationsItem wordTranslation = dbLearnerItem.getWordTranslation();
+        assertEquals(WORD_1, wordTranslation.getKeyWord());
+        assertEquals(ACCEPTED_LANGUAGE_1, wordTranslation.getLocale());
+        assertEquals(TRANSLATION_SET_1, wordTranslation.getTranslations());
+        assertEquals(WT_ID_1.toString(), wordTranslation.get_id().toString());
         assertTrue(dbLearnerItem.getDate().isAfter(TIME));
 
     }
@@ -75,9 +76,7 @@ class QuestionRetrieverTest {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_1);
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_2);
         learnerRepository.save(DB_LEARNER_ITEM_AFTER);
-        Optional<Word> optional = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
-        assertTrue(optional.isPresent());
-        Word word = optional.get();
+        Word word = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
         assertEquals(WORD_2, word.getWord());
     }
 
@@ -86,9 +85,7 @@ class QuestionRetrieverTest {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_1);
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_2);
         learnerRepository.save(DB_LEARNER_ITEM_BEFORE);
-        Optional<Word> optional = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
-        assertTrue(optional.isPresent());
-        Word word = optional.get();
+        Word word = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
         assertEquals(WORD_1, word.getWord());
     }
 
@@ -97,9 +94,7 @@ class QuestionRetrieverTest {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_1);
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_2);
         learnerRepository.save(DB_LEARNER_ITEM_JUST_BEFORE);
-        Optional<Word> optional = SUT.getWord(USERNAME_2, ACCEPTED_LANGUAGE_1);
-        assertTrue(optional.isPresent());
-        Word word = optional.get();
+        Word word = SUT.getWord(USERNAME_2, ACCEPTED_LANGUAGE_1);
         assertEquals(WORD_1, word.getWord());
     }
 
@@ -109,9 +104,7 @@ class QuestionRetrieverTest {
         wordTranslationsRepository.save(DB_WORD_TRANSLATION_ITEM_2);
         learnerRepository.save(DB_LEARNER_ITEM_BEFORE);
         learnerRepository.save(DB_LEARNER_ITEM_JUST_BEFORE);
-        Optional<Word> optional = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
-        assertTrue(optional.isPresent());
-        Word word = optional.get();
+        Word word = SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1);
         assertEquals(WORD_2, word.getWord());
     }
 

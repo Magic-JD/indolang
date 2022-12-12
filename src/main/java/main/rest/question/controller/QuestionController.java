@@ -1,6 +1,5 @@
 package main.rest.question.controller;
 
-import main.exception.Exceptions;
 import main.rest.model.Answer;
 import main.rest.model.Result;
 import main.rest.model.Word;
@@ -25,9 +24,7 @@ public class QuestionController {
     public ResponseEntity<Word> testWord(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         languageValidator.validateLanguage(language);
-        return questionRetriever.getWord(username, language)
-                .map(ResponseEntity::ok)
-                .orElseThrow(Exceptions.AllWordsLearnedException::new);
+        return ResponseEntity.ok(questionRetriever.getWord(username, language));
     }
 
     @PostMapping("/answer")

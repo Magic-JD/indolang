@@ -58,10 +58,10 @@ public class TestConstants {
     public static final ObjectId WT_ID_3 = new ObjectId();
 
     static {
-        DB_WORD_TRANSLATION_ITEM_1.setTranslations(TRANSLATION_SET_1);
-        DB_WORD_TRANSLATION_ITEM_1_SMALL.setTranslations(TRANSLATION_SET_1_SMALL);
-        DB_WORD_TRANSLATION_ITEM_2.setTranslations(TRANSLATION_SET_2);
-        DB_WORD_TRANSLATION_ITEM_3.setTranslations(TRANSLATION_SET_3);
+        TRANSLATION_SET_1.forEach(DB_WORD_TRANSLATION_ITEM_1::addToTranslations);
+        TRANSLATION_SET_1_SMALL.forEach(DB_WORD_TRANSLATION_ITEM_1_SMALL::addToTranslations);
+        TRANSLATION_SET_2.forEach(DB_WORD_TRANSLATION_ITEM_2::addToTranslations);
+        TRANSLATION_SET_3.forEach(DB_WORD_TRANSLATION_ITEM_3::addToTranslations);
         DB_WORD_TRANSLATION_ITEM_1.set_id(WT_ID_1);
         DB_WORD_TRANSLATION_ITEM_1_SMALL.set_id(WT_ID_1);
         DB_WORD_TRANSLATION_ITEM_2.set_id(WT_ID_2);

@@ -1,6 +1,5 @@
 package main.rest.lookup.controller;
 
-import main.exception.Exceptions;
 import main.rest.lookup.Lookup;
 import main.rest.model.Definitions;
 import main.rest.model.Word;
@@ -21,8 +20,6 @@ public class LookupController {
     @ResponseBody
     public ResponseEntity<Definitions> lookup(@RequestHeader(HttpHeaders.ACCEPT_LANGUAGE) String language, @PathVariable Word word) {
         languageValidator.validateLanguage(language);
-        return lookup.lookupWord(language, word)
-                .map(ResponseEntity::ok)
-                .orElseThrow(Exceptions.WordNotFoundException::new);
+        return ResponseEntity.ok(lookup.lookupWord(language, word));
     }
 }

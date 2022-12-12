@@ -6,6 +6,7 @@ import main.database.model.DbLearnerItem;
 import main.database.repository.LearnerCustomRepository;
 import main.database.repository.LearnerRepository;
 import main.database.repository.LearnerWordRepository;
+import main.exception.Exceptions;
 import main.rest.model.Word;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,12 +24,14 @@ public class QuestionRetrieverImpl implements QuestionRetriever {
     @Autowired private WordTranslationsMapper wordTranslationsMapper;
 
     @Override
-    public Optional<Word> getWord(String username, String language) {
+    public Word getWord(String username, String language) {
         return learnerCustomRepository
                 .findNewestBeforeNow(username, ZonedDateTime.now())
                 .map(learnerMapper::toWordItem)
                 .map(wordTranslationsMapper::toWord)
-                .map(Word::new).or(() -> getNewQuestion(username, language));
+                .map(Word::new)
+                .or(() -> getNewQuestion(username, language))
+                .orElseThrow(Exceptions.AllWordsLearnedException::new);
     }
 
     private Optional<Word> getNewQuestion(String username, String language) {

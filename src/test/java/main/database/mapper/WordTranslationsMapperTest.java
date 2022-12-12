@@ -6,8 +6,7 @@ import org.bson.types.ObjectId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Set;
-
+import static main.TestConstants.TRANSLATION_SET_1;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WordTranslationsMapperTest {
@@ -16,25 +15,25 @@ class WordTranslationsMapperTest {
     String keyword = "KEYWORD";
     String en = "en";
     ObjectId id = new ObjectId();
-    Set<String> translations = Set.of("translation");
+
     DbWordTranslationsItem item = new DbWordTranslationsItem(en, keyword);
 
     @BeforeEach
     void setUp() {
         item.set_id(id);
-        item.setTranslations(translations);
+        TRANSLATION_SET_1.forEach(item::addToTranslations);
     }
 
     @Test
     void testConvertsToDefinitionsCorrectly() {
         Definitions definitions = SUT.toDefinitions(item);
         assertEquals(keyword, definitions.getWord());
-        assertEquals(translations, definitions.getWordDefinitions());
+        assertEquals(TRANSLATION_SET_1, definitions.getWordDefinitions());
     }
 
     @Test
     void testConvertsToTranslationsCorrectly() {
-        assertEquals(translations, SUT.toTranslations(item));
+        assertEquals(TRANSLATION_SET_1, SUT.toTranslations(item));
     }
 
     @Test

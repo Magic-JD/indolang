@@ -1,8 +1,6 @@
 package main.database.model;
 
-import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,9 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Document("word_translations")
-@Data
 @Getter
-@Setter
 public class DbWordTranslationsItem {
 
     @Id
@@ -22,8 +18,17 @@ public class DbWordTranslationsItem {
     private final String keyWord;
     private Set<String> translations = new HashSet<>();
 
+    public DbWordTranslationsItem(String locale, String keyWord) {
+        this.locale = locale;
+        this.keyWord = keyWord;
+    }
+
     public ObjectId get_id() {
         return _id;
+    }
+
+    public void set_id(ObjectId id) {
+        _id = id;
     }
 
     public void addToTranslations(String translation) {
