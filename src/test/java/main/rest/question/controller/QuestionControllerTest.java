@@ -27,8 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class QuestionControllerTest extends RestControllerTest {
 
     public static final String QUESTION_RESPONSE = "{\"word\":\"WORD_1\"}";
-    public static final String PASSING_RESPONSE = "{\"pass\":true,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_1\",\"translations\":[]}";
-    public static final String FAILING_RESPONSE = "{\"pass\":false,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_3\",\"translations\":[\"TRANSLATION_1\"]}";
+    public static final String PASSING_RESPONSE = "{\"pass\":true,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_1\",\"correctTranslations\":[]}";
+    public static final String FAILING_RESPONSE = "{\"pass\":false,\"word\":\"WORD_1\",\"submittedTranslation\":\"TRANSLATION_3\",\"correctTranslations\":[\"TRANSLATION_1\"]}";
 
     public static final String URI_QUESTION = "/question";
     public static final String URI_ANSWER = "/answer";
