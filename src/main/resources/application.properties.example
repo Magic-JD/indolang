@@ -3,3 +3,4 @@ spring.data.mongodb.database=indolang
 
 supported_languages=en,id
 registration_roles=USER
+delays_for_correct_answers={'0': '5', '1': '60', '2': '240', '3': '2400', '4': '24000', '5': '240000'}

@@ -52,7 +52,7 @@ class QuestionVerifierTest {
         assertTrue(result.isPass());
         assertEquals(WORD_1, result.getWord());
         assertEquals(TRANSLATION_1, result.getSubmittedTranslation());
-        assertEquals(EMPTY_SET, result.getTranslations());
+        assertEquals(EMPTY_SET, result.getCorrectTranslations());
     }
 
     @Test
@@ -75,7 +75,7 @@ class QuestionVerifierTest {
         assertFalse(result.isPass());
         assertEquals(WORD_1, result.getWord());
         assertEquals(TRANSLATION_3, result.getSubmittedTranslation());
-        assertEquals(TRANSLATION_SET_1, result.getTranslations());
+        assertEquals(TRANSLATION_SET_1, result.getCorrectTranslations());
     }
 
     @Test
