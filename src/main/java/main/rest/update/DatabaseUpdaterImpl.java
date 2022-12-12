@@ -10,30 +10,31 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabaseUpdaterImpl implements DatabaseUpdater {
 
-    @Autowired private WordTranslationsRepository repository;
+    @Autowired private WordTranslationsRepository wordTranslationRepository;
 
     @Override
     public void updateDatabase(String language, Definition definition) {
-        var item = repository.findByKeyword(language, definition.getWord())
+        var item = wordTranslationRepository.findByKeyword(language, definition.getWord())
                 .orElse(new DbWordTranslationsItem(language, definition.getWord()));
         item.addToTranslations(definition.getTranslation());
-        repository.save(item);
+        wordTranslationRepository.save(item);
     }
 
     @Override
     public void removeFromDatabase(String language, Definition definition) {
-        DbWordTranslationsItem wordTranslationsItem = repository.findByKeyword(language, definition.getWord())
-                .filter(item -> item.containsTranslation(definition.getTranslation()))
+        var translationThatShouldBeRemoved = definition.getTranslation();
+        DbWordTranslationsItem wordTranslationsItem = wordTranslationRepository.findByKeyword(language, definition.getWord())
+                .filter(item -> item.containsTranslation(translationThatShouldBeRemoved))
                 .orElseThrow(Exceptions.WordDoesNotExistToBeRemoved::new);
-        updateOrDelete(wordTranslationsItem, definition.getTranslation());
+        updateOrDelete(wordTranslationsItem, translationThatShouldBeRemoved);
     }
 
     private void updateOrDelete(DbWordTranslationsItem item, String translation) {
         item.removeFromTranslations(translation);
         if (item.getTranslations().isEmpty()) {
-            repository.delete(item);
+            wordTranslationRepository.delete(item);
         } else {
-            repository.save(item);
+            wordTranslationRepository.save(item);
         }
     }
 }
