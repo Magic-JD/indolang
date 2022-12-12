@@ -33,7 +33,6 @@ class QuestionRetrieverTest {
         learnerRepository.deleteAll();
     }
 
-
     @Test
     void testLookupThrowsExceptionIfThereIsNothingAppropriateInEitherDatabase() {
         assertThrows(Exceptions.AllWordsLearnedException.class, () -> SUT.getWord(USERNAME_1, ACCEPTED_LANGUAGE_1));
